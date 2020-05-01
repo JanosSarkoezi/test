@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+VERSION=master
+echo "--"
+echo "-- fzf $VERSION"
+echo "--"
+
+cd fzf 
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+cd ~
+if [ -d ~/.fzf ]
+then
+    echo "git pull --rebase" && cd ~/.fzf && git pull --rebase && git checkout $VERSION && ~/.fzf/install --all
+else
+    echo "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf" && git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && cd ~/.fzf && git checkout $VERSION
+fi

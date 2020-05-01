@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+VERSION=6.2
+echo "--"
+echo "-- dwm $VERSION"
+echo "--"
+sudo apt-get -y install \
+    build-essential \
+    libxft-dev \
+    libxinerama-dev \
+    vim
+
+cd dwm
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+mkdir -p ~/.local/bin
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d dwm ]
+then
+    echo "git pull --rebase" && cd dwm && git pull --rebase
+else
+    echo "git clone https://git.suckless.org/dw" && git clone https://git.suckless.org/dwm && cd dwm
+fi
+
+[ ! -d /tmp/dwm-$VERSION ] && make PREFIX=/tmp/dwm-$VERSION install && cd /tmp && tar -czf dwm-$VERSION.tar.gz dwm-$VERSION
+cd /tmp/dwm-$VERSION && cp -r * ~/.local

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+VERSION=master
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d i3 ]
+then
+    echo "git checkout $VERSION" && cd i3 && git checkout $VERSION && \
+    automake --add-missing && autoreconf && ./configure --prefix=/tmp/forDelete/i3-$VERSION && cd x86_64-pc-linux-gnu && make -j8 install
+else
+    echo "git clone https://github.com/i3/i3" && \
+    git clone https://github.com/i3/i3 && cd i3 && git checkout $VERSION && \
+    automake --add-missing && autoreconf && ./configure --prefix=/tmp/forDelete/i3-$VERSION && cd x86_64-pc-linux-gnu && make -j8 install
+fi
+
+mkdir -p /tmp/forDelete && cd /tmp/forDelete
+[ ! -f i3-$VERSION.tar.gz ] && tar -czf i3-$VERSION.tar.gz i3-$VERSION
+cd i3-$VERSION && tar -tzf /tmp/forDelete/i3-$VERSION.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
+cd ~/.local    && tar -tzf /tmp/forDelete/i3-$VERSION.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
+cd ~/.local && find /tmp/forDelete/i3-$VERSION -type d -empty | cut -d/ -f5- | xargs rmdir -p 2> /dev/null

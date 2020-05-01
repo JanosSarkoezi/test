@@ -1,0 +1,4 @@
+00B052 Atheros Communications
+E0286D AVM Audiovisuelles Marketing und Computersysteme GmbH
+8C89A5 Micro-Star INT'L
+B827EB Raspberry Pi Foundation

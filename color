@@ -1,0 +1,33 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use Term::ANSIColor; 
+
+while (my $line = <STDIN>) {
+    print asdf($line).$line;
+}
+
+sub asdf {
+    my $line = shift(@_);
+    my $color = color("reset");
+
+    my %messages = (
+      "newest version" => "green",
+      "git pull"       => "yellow",
+      "error"          => "red",
+      "failed"         => "red",
+      "not found"      => "red",
+      "is not"         => "red",
+      "cannot"         => "red"
+    );
+
+    while (my ($key, $value) = each (%messages)) {
+        if ($line =~ m/$key/i) {
+            $color = color($value);
+            last;
+        }
+    }
+
+    return $color;
+}

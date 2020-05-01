@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+VERSION=10.1
+echo "--"
+echo "-- gdb $VERSION"
+echo "--"
+sudo apt-get -y install \
+    autoconf \
+    automake \
+    bison \
+    build-essential \
+    curl \
+    git \
+    libevent-dev \
+    libncurses5-dev \
+    pkg-config \
+    texinfo \
+    vim
+
+# cd gdb 
+# for dir in *; do
+#     [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+# done
+# cd ..
+
+mkdir -p ~/.local/bin
+
+cd /tmp
+[ ! -f gdb-$VERSION.tar.gz ] && wget https://ftp.gnu.org/gnu/gdb/gdb-$VERSION.tar.gz
+tar -xzf gdb-$VERSION.tar.gz && cd gdb-$VERSION && mkdir build && cd build && ../configure --prefix=/tmp/gdb-bin-$VERSION --with-system-readline --with-python=/usr/bin/python3 && make -j8 && make install
+cd /tmp/gdb-bin-$VERSION && cp -r * ~/.local

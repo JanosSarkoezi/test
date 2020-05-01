@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+VERSION=master
+echo "--"
+echo "-- fasd $VERSION"
+echo "--"
+
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d fasd ]
+then
+    echo "git pull --rebase" && cd fasd && git pull --rebase && git checkout $VERSION && make PREFIX=~/.local install
+else
+    echo "git clone https://github.com/clvv/fasd.git" && git clone https://github.com/clvv/fasd.git && cd fasd && git checkout $VERSION && make PREFIX=~/.local install
+fi

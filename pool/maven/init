@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+VERSION=3.6.3
+echo "--"
+echo "-- maven $VERSION"
+echo "--"
+
+cd maven
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+mkdir -p ~/.local && cd /tmp
+[ ! -f apache-maven-$VERSION-bin.tar.gz ] && wget --progress=bar https://downloads.apache.org/maven/maven-3/$VERSION/binaries/apache-maven-$VERSION-bin.tar.gz
+tar -xzf apache-maven-$VERSION-bin.tar.gz && cd apache-maven-$VERSION && cp -r * ~/.local

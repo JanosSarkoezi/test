@@ -1,0 +1,4 @@
+#!/bin/sh
+JAR=~/.local/target/javacc.jar
+
+java -classpath "$JAR" javacc "$@"

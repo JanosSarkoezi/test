@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+pip3 install --user neovim
+npm install -g neovim
+
+nvim +PlugInstall +qall
+# temporary not avaible (pkill node)
+# nvim -c 'CocInstall -sync coc-json|qall'

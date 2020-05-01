@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+VERSION=javacc-7.0.7
+echo "--"
+echo "-- javacc $VERSION"
+echo "--"
+sudo apt-get -y install \
+    openjdk-8-jdk \
+    ant \
+    vim
+
+cd javacc
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+mkdir -p ~/.local/bin
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d javacc ]
+then
+    echo "git checkout $VERSION" && cd javacc && git checkout $VERSION
+else
+    echo "git clone https://github.com/javacc/javacc" && \
+    git clone https://github.com/javacc/javacc && cd javacc && git checkout $VERSION
+fi
+
+[ ! -d /tmp/$VERSION ] && ant dist && cp target/$VERSION-distribution.tar.gz /tmp && cd /tmp && tar -xzf $VERSION-distribution.tar.gz
+cd /tmp/$VERSION && cp -rf * ~/.local

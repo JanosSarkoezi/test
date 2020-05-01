@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+VERSION=v0.7.2
+mkdir -p /tmp/forDelete && cd /tmp/forDelete
+[ ! -f nvim-linux64.tar.gz ] && wget --progress=bar https://github.com/neovim/neovim/releases/download/$VERSION/nvim-linux64.tar.gz
+
+tar -xzf nvim-linux64.tar.gz
+cd nvim-linux64 && tar -tzf /tmp/forDelete/nvim-linux64.tar.gz | cut -d/ -f2- | sed 's/ /\\ /g' | xargs rm 2> /dev/null
+cd ~/.local     && tar -tzf /tmp/forDelete/nvim-linux64.tar.gz | cut -d/ -f2- | sed 's/ /\\ /g' | xargs rm 2> /dev/null
+cd ~/.local && find /tmp/forDelete/nvim-linux64 -type d -empty | cut -d/ -f5- | xargs rmdir -p 2> /dev/null

@@ -1,0 +1,9 @@
+[Unit]
+Description=Notify after 10 sec.
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/notify-send 'Die Zeit ist um' 'Aufstehen und was anderes machen als Computer.' -i dialog-information
+
+[Install]
+WantedBy=multi-user.target

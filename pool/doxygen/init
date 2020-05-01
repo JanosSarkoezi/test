@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+VERSION=master
+echo "--"
+echo "-- doxigen $VERSION"
+echo "--"
+sudo apt-get -y install \
+    build-essential \
+    flex \
+    git \
+    python3 \
+    python3-pip \
+    vim \
+    wget
+
+cd doxygen 
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+mkdir -p ~/.local/bin
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d doxygen ]
+then
+    echo "git checkout $VERSION" && cd doxygen && git checkout $VERSION
+else
+    echo "git clone --recursive https://github.com/doxygen/doxygen" && \
+    git clone --recursive https://github.com/doxygen/doxygen && cd doxygen && git checkout $VERSION
+fi
+
+[ ! -d /tmp/doxygen-$VERSION ] && mkdir -p build && cd build && cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/tmp/doxygen-$VERSION .. && make install 
+cd /tmp && cd doxygen-$VERSION && cp -r * ~/.local

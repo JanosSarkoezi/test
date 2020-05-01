@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+VERSION=next
+echo "--"
+echo "-- i3wm $VERSION"
+echo "--"
+sudo apt-get -y install \
+    build-essential \
+    automake \
+    libev-dev \
+    libstartup-notification0-dev \
+    libxcb-xkb-dev \
+    libxcb-xinerama0-dev \
+    libxcb-randr0-dev \
+    libxcb-shape0-dev \
+    libxcb-util-dev \
+    libxcb-cursor-dev \
+    libxcb-keysyms1-dev \
+    libxcb-icccm4-dev \
+    libxcb-xrm-dev \
+    libxkbcommon-dev \
+    libxkbcommon-x11-dev \
+    libyajl-dev \
+    libpcre3-dev \
+    libpango1.0-dev \
+    vim
+
+cd i3wm
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+mkdir -p ~/.config/i3 &&  mkdir -p ~/.local/bin &&mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d i3 ]
+then
+    echo "git checkout $VERSION" && cd i3 && git checkout $VERSION && \
+    rm -fr build && mkdir build && cd build && meson --prefix=/tmp/i3-$VERSION .. && meson install
+else
+    echo "git clone https://github.com/i3/i3" && \
+    git clone https://github.com/i3/i3 && cd i3 && git checkout $VERSION && \
+    rm -fr build && mkdir build && cd build && meson --prefix=/tmp/i3$VERSION .. && meson install
+fi
+
+cd /tmp && cd i3-$VERSION && cp -r * ~/.local

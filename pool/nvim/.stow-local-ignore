@@ -1,0 +1,7 @@
+init
+plugin
+fzf
+node
+cmake
+jq
+\.gitignore

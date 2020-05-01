@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# VERSION=3.1
+VERSION=master
+echo "--"
+echo "-- tmux $VERSION"
+echo "--"
+sudo apt-get -y install \
+    autoconf \
+    automake \
+    bison \
+    build-essential \
+    curl \
+    git \
+    libevent-dev \
+    libncurses5-dev \
+    pkg-config \
+    vim
+
+cd tmux
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+mkdir -p ~/.local/bin
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d tmux ]
+then
+    echo "git checkout $VERSION" && cd tmux && git checkout $VERSION
+else
+    echo "git clone https://github.com/tmux/tmux.git" && \
+    git clone https://github.com/tmux/tmux.git && cd tmux && git checkout $VERSION && ./autogen.sh
+fi
+
+[ ! -d /tmp/tmux-$VERSION ] && ./configure --prefix=/tmp/tmux-$VERSION && make install && cd /tmp && tar -czf tmux-$VERSION.tar.gz tmux-$VERSION
+cd /tmp && tar -czf tmux-$VERSION.tar.gz tmux-$VERSION
+cd tmux-$VERSION && cp -r * ~/.local

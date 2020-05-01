@@ -1,0 +1,6 @@
+VERSION=---
+echo "--"
+echo "-- nerdfonts $VERSION"
+echo "--"
+mkdir -p ~/.local/share/fonts
+fc-cache -f -v

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+echo "--"
+echo "-- zsh (apt-get)"
+echo "--"
+sudo apt-get -y install zsh
+
+cd zsh
+for dir in *; do
+    [ -d $dir ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+# ps -p $$ | grep zsh > /dev/null && chsh -s $(which zsh)

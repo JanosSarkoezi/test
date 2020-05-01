@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+delete=(java)
+for dir in "${delete[@]}"; do
+    if [ -d "$dir" ]; then
+        $dir/delete
+    fi
+done

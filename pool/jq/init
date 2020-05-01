@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+VERSION=master
+echo "--"
+echo "-- jq $VERSION"
+echo "--"
+sudo apt-get -y install \
+    autoconf \
+    automake \
+    bison \
+    build-essential \
+    git \
+    libtool \
+    pkg-config \
+    vim
+
+cd jq 
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+mkdir -p ~/.local/bin
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d jq ]
+then
+    echo "git checkout $VERSION" && cd jq && git checkout $VERSION
+else
+    echo "git clone https://github.com/stedolan/jq.git" && \
+    git clone https://github.com/stedolan/jq.git && cd jq && git submodule update --init
+fi
+
+[ ! -d /tmp/jq-$VERSION ] && autoreconf -fi && ./configure --prefix=/tmp/jq-$VERSION --with-oniguruma=builtin && make -j8 && make check && make install && cd /tmp && tar -czf jq-$VERSION.tar.gz jq-$VERSION
+cd /tmp && tar -czf jq-$VERSION.tar.gz jq-$VERSION
+cd jq-$VERSION && cp -r * ~/.local

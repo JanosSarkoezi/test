@@ -1,0 +1,38 @@
+call plug#begin('~/.vim/bundle')
+
+set rtp+=~/.fzf
+
+Plug 'junegunn/fzf.vim'
+Plug 'tomasiser/vim-code-dark'
+Plug 'morhetz/gruvbox'
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Use release branch (Recommend)
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'itchyny/lightline.vim'
+Plug 'jpalardy/vim-slime'
+Plug 'vim-scripts/AfterColors.vim'
+Plug 'justinmk/vim-dirvish'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
+Plug 'fcpg/vim-waikiki'
+Plug 'lervag/vimtex'
+Plug 'fatih/vim-go'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'mhinz/vim-startify'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'kristijanhusak/vim-dadbod-completion'
+"Plug 'haorenW1025/completion-nvim'
+
+" Plug 'liuchengxu/vim-which-key'
+" Plug 'mileszs/ack.vim'
+" Plug 'vimwiki/vimwiki'
+" Plug 'sakhnik/nvim-gdb', { 'branch': 'legacy' }
+" Plug 'vhdirk/vim-cmake'
+" Plug 'dpelle/vim-LanguageTool'
+
+call plug#end()

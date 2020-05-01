@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+echo "--"
+echo "-- mpd (apt-get)"
+echo "--"
+sudo apt-get -y install mpd mpc
+
+cd mpd
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+mkdir -p ~/.config/mpd

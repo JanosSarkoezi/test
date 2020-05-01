@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+source ~/.profile
+
+dirs=(nvim fzf)
+for dir in "${dirs[@]}"; do
+    [ -d "$dir" ] && $dir/plugin
+done

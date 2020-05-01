@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+sudo apt-get update
+sudo apt-get -y install \
+    stow \
+    x11-xkb-utils \
+    wget
+
+mkdir -p ~/.local/bin
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done

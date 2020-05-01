@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# VERSION=v13.14.0
+VERSION=v16.3.0
+DISTRO=linux-x64
+mkdir -p /tmp/forDelete && cd /tmp/forDelete
+[ ! -f node-$VERSION-$DISTRO.tar.gz ] && wget --progress=bar http://nodejs.org/dist/$VERSION/node-$VERSION-$DISTRO.tar.gz
+
+tar -xzf node-$VERSION-$DISTRO.tar.gz
+cd node-$VERSION-$DISTRO && tar -tzf /tmp/forDelete/node-$VERSION-$DISTRO.tar.gz | cut -d/ -f2- | sed 's/ /\\ /g' | xargs rm 2> /dev/null
+cd ~/.local              && tar -tzf /tmp/forDelete/node-$VERSION-$DISTRO.tar.gz | cut -d/ -f2- | sed 's/ /\\ /g' | xargs rm 2> /dev/null
+cd ~/.local && find /tmp/forDelete/node-$VERSION-$DISTRO -type d -empty | cut -d/ -f5- | xargs rmdir -p 2> /dev/null

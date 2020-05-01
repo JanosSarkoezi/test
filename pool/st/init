@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+VERSION=0.8.4
+echo "--"
+echo "-- st $VERSION"
+echo "--"
+sudo apt-get -y install \
+    libxft-dev \
+    vim
+
+cd st
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+mkdir -p ~/.local/bin
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d st ]
+then
+    echo "git pull --rebase" && cd st && git pull --rebase
+else
+    echo "git clone https://git.suckless.org/st" && git clone https://git.suckless.org/st && cd st
+fi
+
+[ ! -d /tmp/st-$VERSION ] && make PREFIX=/tmp/st-$VERSION install && cd /tmp && tar -czf st-$VERSION.tar.gz st-$VERSION
+cd /tmp/st-$VERSION && cp -r * ~/.local
