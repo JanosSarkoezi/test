@@ -1,0 +1,19 @@
+echo "--- tmux ---"
+sudo apt update
+sudo apt -y install \
+    git \
+    curl \
+    vim \
+    automake \
+    autoconf \
+    pkg-config \
+    build-essential \
+    libevent-dev \
+    libncurses5-dev
+
+mkdir -p ~/dev/git
+cd ~/dev/git
+git clone https://github.com/tmux/tmux.git
+cd tmux
+./autogen.sh
+./configure && make
