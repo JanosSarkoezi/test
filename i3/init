@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+echo "--"
+echo "-- i3"
+echo "--"
+mkdir -p ~/.config/i3

@@ -1,4 +1,7 @@
-echo "--- tmux ---"
+#!/usr/bin/env bash
+echo "--"
+echo "-- tmux"
+echo "--"
 sudo apt update
 sudo apt -y install \
     git \
@@ -11,9 +14,10 @@ sudo apt -y install \
     libevent-dev \
     libncurses5-dev
 
-mkdir -p ~/dev/git
-cd ~/dev/git
-git clone https://github.com/tmux/tmux.git
-cd tmux
-./autogen.sh
-./configure && make
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d tmux ]
+then
+    echo "++++++" && cd tmux && git pull --rebase && make
+else
+    echo "------" && git clone https://github.com/tmux/tmux.git && cd tmux && ./autogen.sh && ./configure && make
+fi

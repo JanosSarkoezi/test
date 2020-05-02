@@ -1,6 +1,6 @@
 for dir in *; do
     if [ -d "$dir" ]; then
         $dir/init
-        echo $dir
+        # echo $dir
     fi
 done
