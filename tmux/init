@@ -4,15 +4,16 @@ echo "-- tmux"
 echo "--"
 sudo apt update
 sudo apt -y install \
-    git \
-    curl \
-    vim \
-    automake \
     autoconf \
-    pkg-config \
+    automake \
+    bison \
     build-essential \
+    curl \
+    git \
     libevent-dev \
-    libncurses5-dev
+    libncurses5-dev \
+    pkg-config \
+    vim
 
 mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d tmux ]
