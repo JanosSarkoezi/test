@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+echo "--"
+echo "-- vim"
+echo "--"
+sudo apt update
+sudo apt -y install \
+    git \
+    vim
+
+mkdir -p ~/.test/vim && cd ~/.test/vim
+if [ -d autoload ]
+then
+    echo "++++++" && cd autoload && git pull --rebase
+else
+    echo "------" && git clone https://github.com/junegunn/vim-plug autoload
+fi
