@@ -7,7 +7,7 @@ sudo apt -y install \
     git \
     vim
 
-mkdir -p ~/.test/vim && cd ~/.test/vim
+mkdir -p ~/.test/vim/.vim && cd ~/.test/vim/.vim
 if [ -d autoload ]
 then
     echo "++++++" && cd autoload && git pull --rebase
