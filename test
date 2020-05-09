@@ -6,6 +6,6 @@ sudo apt -y install \
 for dir in *; do
     if [ -d "$dir" ]; then
         $dir/init
-        stow $dir
+        stow --ignore=init $dir
     fi
 done
