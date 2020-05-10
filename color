@@ -7,6 +7,7 @@ my %messages = (
   "git pull"       => "yellow",
   "error"          => "red",
   "failed"         => "red",
+  "not found"      => "red",
   "newest version" => "green"
 );
 
