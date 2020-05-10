@@ -6,6 +6,7 @@ use Term::ANSIColor;
 my %messages = (
   "git pull"       => "yellow",
   "error"          => "red",
+  "failed"         => "red",
   "newest version" => "green"
 );
 
