@@ -2,6 +2,7 @@
 sudo apt-get update
 sudo apt-get -y install \
     stow \
+    wget
 
 for dir in *; do
     if [ -d "$dir" ]; then
