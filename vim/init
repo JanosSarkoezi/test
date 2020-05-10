@@ -14,3 +14,16 @@ then
 else
     echo "------" && git clone https://github.com/junegunn/vim-plug autoload
 fi
+
+cd ~/.dotfiles/vim
+if [ -d 5158535 ]
+then
+    echo "++++++" && cd 5158535 && git pull --rebase
+else
+    echo "------" && git clone https://gist.github.com/tarruda/5158535
+fi
+
+cd ~/.dotfiles/vim/.local/bin
+ln -nsf ~/.dotfiles/vim/5158535/vim-tmux-move.zsh
+ln -nsf ~/.dotfiles/vim/5158535/vim-tmux-open.zsh
+ln -nsf ~/.dotfiles/vim/5158535/vim-tmux-xpaste.zsh
