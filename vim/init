@@ -9,17 +9,17 @@ sudo apt -y install \
 mkdir -p ~/.dotfiles/vim/.vim && cd ~/.dotfiles/vim/.vim
 if [ -d autoload ]
 then
-    echo "++++++" && cd autoload && git pull --rebase
+    echo "git pull --rebase" && cd autoload && git pull --rebase
 else
-    echo "------" && git clone https://github.com/junegunn/vim-plug autoload
+    echo "git clone https://github.com/junegunn/vim-plug autoload" && git clone https://github.com/junegunn/vim-plug autoload
 fi
 
 cd ~/.dotfiles/vim
 if [ -d 5158535 ]
 then
-    echo "++++++" && cd 5158535 && git pull --rebase
+    echo "git pull --rebase" && cd 5158535 && git pull --rebase
 else
-    echo "------" && git clone https://gist.github.com/tarruda/5158535
+    echo "git clone https://gist.github.com/tarruda/5158535" && git clone https://gist.github.com/tarruda/5158535
 fi
 
 mkdir -p ~/.dotfiles/vim/.local/bin && cd ~/.dotfiles/vim/.local/bin
@@ -29,4 +29,3 @@ cp -f ~/.dotfiles/vim/5158535/vim-tmux-xpaste.zsh .
 
 mkdir -p ~/.dotfiles/vim/.rc/tarruda && cd ~/.dotfiles/vim/.rc/tarruda
 cp -f ~/.dotfiles/vim/5158535/.vimrc .
-

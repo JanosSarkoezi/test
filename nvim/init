@@ -19,9 +19,9 @@ cd nvim-linux64 && cp -r * ~/.local
 mkdir -p ~/.dotfiles/vim/.vim && cd ~/.dotfiles/vim/.vim
 if [ -d autoload ]
 then
-    echo "++++++" && cd autoload && git pull --rebase
+    echo "git pull --rebase" && cd autoload && git pull --rebase
 else
-    echo "------" && git clone https://github.com/junegunn/vim-plug autoload
+    echo "git clone https://github.com/junegunn/vim-plug autoload" && git clone https://github.com/junegunn/vim-plug autoload
 fi
 
 mkdir -p ~/.local/share/nvim/site && cd ~/.local/share/nvim/site
