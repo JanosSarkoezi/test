@@ -3,7 +3,9 @@ echo "--"
 echo "-- nvim"
 echo "--"
 sudo apt update
-sudo apt -y install wget 
+sudo apt -y install \
+    python3 \
+    wget 
 
 VERSION=v0.4.3
 mkdir -p ~/.local && cd /tmp
