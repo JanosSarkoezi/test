@@ -9,6 +9,8 @@ sudo apt -y install \
     wget \
     xclip
 
+mkdir -p ~/config/nvim
+
 VERSION=v0.4.3
 mkdir -p ~/.local && cd /tmp
 [ ! -f nvim-linux64.tar.gz ] && wget https://github.com/neovim/neovim/releases/download/$VERSION/nvim-linux64.tar.gz
