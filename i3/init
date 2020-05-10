@@ -2,5 +2,5 @@
 echo "--"
 echo "-- i3"
 echo "--"
-sudo apt-get install i3
+sudo apt-get -y install i3
 mkdir -p ~/.config/i3
