@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+echo "--"
+echo "-- node"
+echo "--"
+sudo apt update
+sudo apt -y install wget 
+
+VERSION=v0.4.3
+mkdir -p ~/.local && cd /tmp
+wget https://github.com/neovim/neovim/releases/download/$VERSION/nvim-linux64.tar.gz
+tar -xzf nvim-linux64.tar.gz
+cd nvim-linux64 && cp -r * ~/.local
