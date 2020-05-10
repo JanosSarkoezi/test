@@ -2,7 +2,6 @@
 echo "--"
 echo "-- nvim"
 echo "--"
-sudo apt-get update
 sudo apt -y install \
     python3 \
     python3-pip \

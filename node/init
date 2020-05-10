@@ -2,7 +2,6 @@
 echo "--"
 echo "-- node"
 echo "--"
-sudo apt-get update
 sudo apt -y install wget 
 
 VERSION=v13.14.0

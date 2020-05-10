@@ -2,7 +2,6 @@
 echo "--"
 echo "-- tmux"
 echo "--"
-sudo apt-get update
 sudo apt -y install \
     autoconf \
     automake \
