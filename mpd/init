@@ -2,3 +2,5 @@
 echo "--"
 echo "-- mpd"
 echo "--"
+sudo apt-get update
+sudo apt -y install mpd mpc
