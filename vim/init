@@ -24,6 +24,6 @@ else
 fi
 
 mkdir -p ~/.dotfiles/vim/.local/bin && cd ~/.dotfiles/vim/.local/bin
-ln -nsf ~/.dotfiles/vim/5158535/vim-tmux-move.zsh
-ln -nsf ~/.dotfiles/vim/5158535/vim-tmux-open.zsh
-ln -nsf ~/.dotfiles/vim/5158535/vim-tmux-xpaste.zsh
+cp ~/.dotfiles/vim/5158535/vim-tmux-move.zsh .
+cp ~/.dotfiles/vim/5158535/vim-tmux-open.zsh .
+cp ~/.dotfiles/vim/5158535/vim-tmux-xpaste.zsh .
