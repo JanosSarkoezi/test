@@ -28,6 +28,6 @@ cp -f ~/.dotfiles/vim/5158535/vim-tmux-move.zsh .
 cp -f ~/.dotfiles/vim/5158535/vim-tmux-open.zsh .
 cp -f ~/.dotfiles/vim/5158535/vim-tmux-xpaste.zsh .
 
-cd ~/.dotfiles/vim/.rc/tarruda
+mkdir -p ~/.dotfiles/vim/.rc/tarruda && cd ~/.dotfiles/vim/.rc/tarruda
 cp -f ~/.dotfiles/vim/5158535/.vimrc .
 
