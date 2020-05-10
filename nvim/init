@@ -12,7 +12,7 @@ mkdir -p ~/config/nvim
 
 VERSION=v0.4.3
 mkdir -p ~/.local && cd /tmp
-[ ! -f nvim-linux64.tar.gz ] && wget https://github.com/neovim/neovim/releases/download/$VERSION/nvim-linux64.tar.gz
+[ ! -f nvim-linux64.tar.gz ] && wget -progress=bar https://github.com/neovim/neovim/releases/download/$VERSION/nvim-linux64.tar.gz
 tar -xzf nvim-linux64.tar.gz
 cd nvim-linux64 && cp -r * ~/.local
 
@@ -27,6 +27,7 @@ fi
 mkdir -p ~/.local/share/nvim/site && cd ~/.local/share/nvim/site
 [ ! -f autoload ] && ln -s ~/.dotfiles/vim/.vim/autoload autoload
 
+source ~/.profile
 pip3 install --user neovim
 npm install -g neovim
 
