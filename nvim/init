@@ -29,6 +29,5 @@ mkdir -p ~/.local/share/nvim/site && cd ~/.local/share/nvim/site
 
 pip3 install --user neovim
 npm install -g neovim
-yarn global add neovim
 
 nvim -c 'CocInstall -sync coc-json|q'
