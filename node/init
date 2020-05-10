@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+echo "--"
+echo "-- node"
+echo "--"
+VERSION=v13.14.0
+DISTRO=linux-x64
+cd ~/.local
+wget http://nodejs.org/dist/v13.14.0/node-$VERSION-$DISTRO.tar.gz
+tar -xzf node-$VERSION-$DISTRO.tar.gz
