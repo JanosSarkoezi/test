@@ -2,7 +2,7 @@
 echo "--"
 echo "-- vim"
 echo "--"
-sudo apt update
+sudo apt-get update
 sudo apt -y install \
     git \
     vim

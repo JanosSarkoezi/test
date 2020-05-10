@@ -2,7 +2,7 @@
 echo "--"
 echo "-- nvim"
 echo "--"
-sudo apt update
+sudo apt-get update
 sudo apt -y install \
     python3 \
     wget 
