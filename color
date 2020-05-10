@@ -3,8 +3,19 @@
 use strict;
 use warnings;
 use Term::ANSIColor; 
+%messages = (
+  "git pull"       => "yellow",
+  "error"          => "red",
+  "---"            => "green",
+  "newest version" => "green"
+);
 
 my $color=shift;
 while (<>) {
-    print color("$color").$_.color("reset");
+    while (($key, $value) = each (%messages)) {
+        $value = $messages{$key};
+        if ($_ =~ m/$key/) {
+            print color("$value").$_.color("reset");
+        }
+    }
 } 
