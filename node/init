@@ -7,6 +7,7 @@ sudo apt -y install wget
 
 VERSION=v13.14.0
 DISTRO=linux-x64
-cd ~/.local
+cd /tmp
 wget http://nodejs.org/dist/v13.14.0/node-$VERSION-$DISTRO.tar.gz
 tar -xzf node-$VERSION-$DISTRO.tar.gz
+cd node-$VERSION-$DISTRO && cp -r * ~/.local
