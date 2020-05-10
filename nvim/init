@@ -19,5 +19,5 @@ else
     echo "------" && git clone https://github.com/junegunn/vim-plug autoload
 fi
 
-mkdir -p ~/.local/share/nvim/site && cd -p ~/.local/share/nvim/site
+mkdir -p ~/.local/share/nvim/site && cd ~/.local/share/nvim/site
 ln -s ~/.dotfiles/vim/.vim/autoload autoload
