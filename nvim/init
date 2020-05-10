@@ -6,7 +6,8 @@ sudo apt-get update
 sudo apt -y install \
     python3 \
     python3-pip \
-    wget 
+    wget \
+    xclip
 
 VERSION=v0.4.3
 mkdir -p ~/.local && cd /tmp
