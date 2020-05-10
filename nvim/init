@@ -10,3 +10,14 @@ mkdir -p ~/.local && cd /tmp
 wget https://github.com/neovim/neovim/releases/download/$VERSION/nvim-linux64.tar.gz
 tar -xzf nvim-linux64.tar.gz
 cd nvim-linux64 && cp -r * ~/.local
+
+mkdir -p ~/.dotfiles/vim/.vim && cd ~/.dotfiles/vim/.vim
+if [ -d autoload ]
+then
+    echo "++++++" && cd autoload && git pull --rebase
+else
+    echo "------" && git clone https://github.com/junegunn/vim-plug autoload
+fi
+
+mkdir -p ~/.local/share/nvim/site && cd -p ~/.local/share/nvim/site
+ln -s ~/.dotfiles/vim/.vim/autoload autoload
