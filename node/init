@@ -2,7 +2,7 @@
 echo "--"
 echo "-- node"
 echo "--"
-sudo apt -y install wget 
+sudo apt-get -y install wget 
 
 VERSION=v13.14.0
 DISTRO=linux-x64

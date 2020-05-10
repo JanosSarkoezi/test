@@ -2,6 +2,6 @@
 echo "--"
 echo "-- mpd"
 echo "--"
-sudo apt -y install mpd mpc
+sudo apt-get -y install mpd mpc
 
 mkdir -p ~/.config/mpd
