@@ -25,5 +25,6 @@ fi
 mkdir -p ~/.local/share/nvim/site && cd ~/.local/share/nvim/site
 [ ! -f autoload ] && ln -s ~/.dotfiles/vim/.vim/autoload autoload
 
+pip3 install --user neovim
 npm install -g neovim
 yarn global add neovim
