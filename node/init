@@ -2,6 +2,9 @@
 echo "--"
 echo "-- node"
 echo "--"
+sudo apt update
+sudo apt -y install wget 
+
 VERSION=v13.14.0
 DISTRO=linux-x64
 cd ~/.local
