@@ -27,10 +27,11 @@ fi
 mkdir -p ~/.local/share/nvim/site && cd ~/.local/share/nvim/site
 [ ! -f autoload ] && ln -s ~/.dotfiles/vim/.vim/autoload autoload
 
-rehash
 pip3 install --user neovim
 npm install -g neovim
 
 # ~/.local/bin/nvim -c 'PlugInstall|qa'
-~/.local/bin/nvim +PlugInstall +qall
-~/.local/bin/nvim -c 'CocInstall -sync coc-json|q'
+# ~/.local/bin/nvim +PlugInstall +qall
+# ~/.local/bin/nvim -c 'CocInstall -sync coc-json|q'
+nvim +PlugInstall +qall
+nvim -c 'CocInstall -sync coc-json|q'
