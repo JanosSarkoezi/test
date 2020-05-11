@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+dirs=(nvim)
+for dir in "${dirs[@]}"; do
+    [ -d "$dir" ] && $dir/plugin
+done

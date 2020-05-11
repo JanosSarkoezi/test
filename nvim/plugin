@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+pip3 install --user neovim
+npm install -g neovim
+
+nvim +PlugInstall +qall
+nvim -c 'CocInstall -sync coc-json|q'
