@@ -4,7 +4,7 @@ sudo apt-get -y install \
     stow \
     wget
 
-mkdir ~/.local/bin && source ~/.profile
+mkdir -p ~/.local/bin && source ~/.profile
 
 for dir in *; do
     if [ -d "$dir" ]; then
