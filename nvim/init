@@ -32,5 +32,5 @@ pip3 install --user neovim
 npm install -g neovim
 
 # ~/.local/bin/nvim -c 'PlugInstall|qa'
-~/.local/bin/nvim +PlugInstallx +qall
+~/.local/bin/nvim +PlugInstall +qall
 ~/.local/bin/nvim -c 'CocInstall -sync coc-json|q'
