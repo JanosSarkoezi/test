@@ -7,7 +7,7 @@ sudo apt-get -y install \
 mkdir -p ~/.local/bin && source ~/.profile
 
 init=(i3 mpd node cmake tmux nvim vim)
-for dir in $init; do
+for dir in "$init[@]"; do
     if [ -d "$dir" ]; then
         $dir/init
         stow $dir
