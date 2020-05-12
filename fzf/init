@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+echo "--"
+echo "-- fzf"
+echo "--"
+
+if [ -d ~/.fzf ]
+then
+    echo "git pull --rebase" && cd ~/.fzf && git pull --rebase && ./install --all
+else
+    echo "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf" && git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install --all
+fi
