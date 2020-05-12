@@ -2,5 +2,5 @@
 echo "--"
 echo "-- i3"
 echo "--"
-sudo apt-get -y install i3
+sudo apt-get -y install i3 j4-dmenu-desktop 
 mkdir -p ~/.config/i3
