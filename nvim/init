@@ -8,7 +8,7 @@ sudo apt-get -y install \
     wget \
     xclip
 
-mkdir -p ~/config/nvim
+mkdir -p ~/.config/nvim
 
 VERSION=v0.4.3
 mkdir -p ~/.local && cd /tmp
