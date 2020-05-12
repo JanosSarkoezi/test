@@ -70,3 +70,10 @@ colors codedark
 
 let g:languagetool_jar='$HOME/LanguageTool-5.0-SNAPSHOT/languagetool-commandline.jar'
 let g:languagetool_lang='de-DE'
+
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <M-left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <M-down> :TmuxNavigateDown<cr>
+nnoremap <silent> <M-up> :TmuxNavigateUp<cr>
+nnoremap <silent> <M-right> :TmuxNavigateRight<cr>
