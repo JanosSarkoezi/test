@@ -5,6 +5,7 @@ echo "--"
 sudo apt-get -y install zsh
 ps -p $$ | grep zsh > /dev/null && chsh -s $(which zsh)
 
+cd ~
 if [ -d ~/.oh-my-zsh ]
 then
     echo "git pull --rebase" && cd ~/.oh-my-zsh && git pull --rebase
@@ -12,7 +13,7 @@ else
     echo "git clone https://github.com/ohmyzsh/ohmyzsh.git" && git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 fi
 
-cd ~/dev/git
+mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d fasd ]
 then
     echo "git pull --rebase" && cd fasd && git pull --rebase && make PREFIX=~/.local install
