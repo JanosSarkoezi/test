@@ -5,3 +5,11 @@ echo "--"
 sudo apt-get -y install mpd mpc
 
 mkdir -p ~/.config/mpd
+
+cd ~/dev/git
+if [ -d pulsemixer ]
+then
+    echo "git pull --rebase" && cd pulsemixer && git pull --rebase && cp pulsemixer ~/.local/bin
+else
+    echo "git clone https://github.com/GeorgeFilipkin/pulsemixer" && git clone https://github.com/GeorgeFilipkin/pulsemixer && cd pulsemixer && cp pulsemixer ~/.local/bin
+fi
