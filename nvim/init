@@ -25,4 +25,4 @@ else
 fi
 
 mkdir -p ~/.local/share/nvim/site && cd ~/.local/share/nvim/site
-[ ! -f autoload ] && ln -s ~/.dotfiles/vim/.vim/autoload autoload
+[ ! -e autoload ] && ln -s ~/.dotfiles/vim/.vim/autoload autoload
