@@ -11,5 +11,5 @@ if [ -d st ]
 then
     echo "git pull --rebase" && cd st && git pull --rebase && make
 else
-    echo "git clone https://git.suckless.org/st" && git clone https://github.com/tmux/tmux.git && cd st && make
+    echo "git clone https://git.suckless.org/st" && git clone https://git.suckless.org/st && cd st && make
 fi
