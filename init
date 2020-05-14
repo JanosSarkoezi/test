@@ -13,5 +13,3 @@ for dir in "${init[@]}"; do
         stow $dir
     fi
 done
-
-# test
