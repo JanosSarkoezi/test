@@ -10,7 +10,10 @@ mkdir -p ~/.local/bin
 mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d st ]
 then
-    echo "git pull --rebase" && cd st && git pull --rebase && make
+    echo "git pull --rebase" && cd st && git pull --rebase
 else
-    echo "git clone https://git.suckless.org/st" && git clone https://git.suckless.org/st && cd st && make
+    echo "git clone https://git.suckless.org/st" && git clone https://git.suckless.org/st && cd st
 fi
+
+sed -i 's/char \*termname = "st-256color";/char \*termname = "xterm-256color";/g' config.dev.h
+make
