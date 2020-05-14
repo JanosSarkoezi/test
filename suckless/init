@@ -3,6 +3,7 @@ echo "--"
 echo "-- suckless"
 echo "--"
 sudo apt-get -y install \
+    libxft-dev \
     vim
 
 mkdir -p ~/.local/bin
