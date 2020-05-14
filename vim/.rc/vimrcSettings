@@ -68,7 +68,7 @@ colors codedark
 " asugegraut. Seie hierzu in der .tmux.conf
 " hi Normal ctermbg=none
 
-let g:languagetool_jar='$HOME/LanguageTool-5.0-SNAPSHOT/languagetool-commandline.jar'
+let g:languagetool_jar='$HOME/.local/lib/languagetool/languagetool-commandline.jar'
 let g:languagetool_lang='de-DE'
 
 let g:tmux_navigator_no_mappings = 1
