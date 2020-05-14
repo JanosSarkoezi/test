@@ -1,0 +1,1 @@
+cd ~/.local/ && tar -tzf /tmp/apache-maven-3.6.3-bin.tar.gz | sed 's/^[^\/]*\///g' | xargs rm
