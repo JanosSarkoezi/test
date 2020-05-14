@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 VERSION=3.6.3
-mkdir -p /tmp/forDelete cd /tmp/forDelete
+mkdir -p /tmp/forDelete && cd /tmp/forDelete
 [ ! -f apache-maven-$VERSION-bin.tar.gz ] && wget --progress=bar https://downloads.apache.org/maven/maven-3/$VERSION/binaries/apache-maven-$VERSION-bin.tar.gz
 
 tar -xzf apache-maven-$VERSION-bin.tar.gz
