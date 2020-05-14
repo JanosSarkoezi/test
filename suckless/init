@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+echo "--"
+echo "-- suckless"
+echo "--"
+sudo apt-get -y install \
+    vim
+
+mkdir -p ~/.local/bin
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d st ]
+then
+    echo "git pull --rebase" && cd st && git pull --rebase && make
+else
+    echo "git clone https://git.suckless.org/st" && git clone https://github.com/tmux/tmux.git && cd st && make
+fi
