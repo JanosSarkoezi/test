@@ -7,4 +7,4 @@ mkdir -p /tmp/forDelete && cd /tmp/forDelete
 tar -xzf apache-maven-$VERSION-bin.tar.gz
 cd apache-maven-$VERSION && tar -tzf /tmp/forDelete/apache-maven-$VERSION-bin.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
 cd ~/.local              && tar -tzf /tmp/forDelete/apache-maven-$VERSION-bin.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
-cd ~/.local && find /tmp/forDelete/apache-maven-$VERSION -type d -empty | cut -d/ -f5- | xargs rmdir -p
+cd ~/.local && find /tmp/forDelete/apache-maven-$VERSION -type d -empty | cut -d/ -f5- | xargs rmdir -p 2> /dev/null
