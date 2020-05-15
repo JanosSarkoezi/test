@@ -20,7 +20,7 @@ mkdir -p ~/.local/bin
 mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d tmux ]
 then
-    echo "git pull --rebase" && cd tmux && git checkout $VERSION && \
+    echo "git checkout $VERSION" && cd tmux && git checkout $VERSION && \
     ./configure --prefix=/tmp/tmux-$VERSION && make install
 else
     echo "git clone https://github.com/tmux/tmux.git" && \
