@@ -18,7 +18,7 @@ while (<>) {
     $colored = 0;
     while (($key, $value) = each (%messages)) {
         $value = $messages{$key};
-        if ($_ =~ m/$key/) {
+        if ($_ =~ m/$key/i) {
             print color("$value").$_.color("reset");
             $colored = 1;
         }
