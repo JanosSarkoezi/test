@@ -1,0 +1,11 @@
+--- config.h	2020-05-15 20:49:00.692663434 +0200
++++ config.d	2020-05-15 20:47:06.602087234 +0200
+@@ -70,7 +70,7 @@
+ static int bellvolume = 0;
+ 
+ /* default TERM value */
+-char *termname = "st-256color";
++char *termname = "xterm-256color";
+ 
+ /*
+  * spaces per tab
