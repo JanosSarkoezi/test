@@ -20,7 +20,7 @@ fi
 cp ~/.dotfiles/suckless/config-xterm-256color.diff . && patch config.def.h < config-xterm-256color.diff && make && git checkout -- .
 if [ -d /tmp/st-$VERSION ]
 then
-    cd /tmp/st-$VERSION && cp -r * ~/.local/bin
+    cd /tmp/st-$VERSION && cp -r * ~/.local
 else
     make PREFIX=/tmp/st-$VERSION install && cd /tmp && tar -czf st-$VERSION.tar.gz st-VERSION
 fi
