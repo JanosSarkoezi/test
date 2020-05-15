@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 VERSION=3.1
-mkdir -p /tmp/forDelete && cd /tmp/forDelete
 mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d tmux ]
 then
@@ -13,6 +12,7 @@ else
     ./autogen.sh && ./configure --prefix=/tmp/forDelete/tmux-$VERSION && make install
 fi
 
+mkdir -p /tmp/forDelete && cd /tmp/forDelete
 tar -czf tmux-$VERSION.tar.gz tmux-$VERSION
 cd tmux-$VERSION && tar -tzf /tmp/forDelete/tmux-$VERSION.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
 cd ~/.local      && tar -tzf /tmp/forDelete/tmux-$VERSION.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
