@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+
+VERSION=3.1
 echo "--"
-echo "-- tmux"
+echo "-- tmux $VERSION"
 echo "--"
 sudo apt-get -y install \
     autoconf \
@@ -14,7 +16,6 @@ sudo apt-get -y install \
     pkg-config \
     vim
 
-VERSION=3.1
 mkdir -p ~/.local/bin
 mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d tmux ]
@@ -22,7 +23,7 @@ then
     echo "git pull --rebase" && cd tmux && git pull --rebase && make install
 else
     echo "git clone https://github.com/tmux/tmux.git" && \
-    git clone https://github.com/tmux/tmux.git && \
+    git clone https://github.com/tmux/tmux.git && git checkout $VERSION && \
     cd tmux && ./autogen.sh && ./configure --prefix=/tmp/tmux-$VERSION && make install
 fi
 
