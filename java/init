@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 echo "--"
-echo "-- java"
+echo "-- java (apt-get openjdk-11-jdk)"
 echo "--"
 sudo apt-get -y install openjdk-11-jdk
 
-VERSION=3.6.3
-mkdir -p ~/.local && cd /tmp
-[ ! -f apache-maven-$VERSION-bin.tar.gz ] && wget --progress=bar https://downloads.apache.org/maven/maven-3/$VERSION/binaries/apache-maven-$VERSION-bin.tar.gz
-
-tar -xzf apache-maven-$VERSION-bin.tar.gz
-cd apache-maven-$VERSION && cp -r * ~/.local
+for dir in java/*; do
+    [ -d "$dir" ] && $dir/init && stow $dir
+done
