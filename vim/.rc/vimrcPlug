@@ -16,5 +16,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vhdirk/vim-cmake'
 Plug 'dpelle/vim-LanguageTool'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'voldikss/vim-floaterm'
+Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
