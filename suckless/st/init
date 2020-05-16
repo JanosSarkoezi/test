@@ -2,7 +2,7 @@
 
 VERSION=0.8.3
 echo "--"
-echo "-- suckless $VERSION"
+echo "-- st $VERSION"
 echo "--"
 sudo apt-get -y install \
     libxft-dev \
@@ -18,9 +18,5 @@ else
 fi
 
 cp ~/.dotfiles/suckless/st/config-xterm-256color.diff . && patch config.def.h < config-xterm-256color.diff && make && git checkout -- .
-if [ -d /tmp/st-$VERSION ]
-then
-    cd /tmp/st-$VERSION && cp -r * ~/.local
-else
-    make PREFIX=/tmp/st-$VERSION install && cd /tmp && tar -czf st-$VERSION.tar.gz st-$VERSION
-fi
+[ ! -d /tmp/st-$VERSION ] && make PREFIX=/tmp/st-$VERSION install && cd /tmp && tar -czf st-$VERSION.tar.gz st-$VERSION
+cd /tmp/st-$VERSION && cp -r * ~/.local
