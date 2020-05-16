@@ -7,7 +7,8 @@ echo "--"
 sudo apt-get -y install \
     build-essential \
     libxft-dev \
-    libxinerama-dev
+    libxinerama-dev \
+    vim
 
 mkdir -p ~/.local/bin
 mkdir -p ~/dev/git && cd ~/dev/git
