@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+VERSION=v0.4.3
 echo "--"
-echo "-- nvim"
+echo "-- nvim $VERSION"
 echo "--"
 sudo apt-get -y install \
     python3 \
@@ -8,10 +9,7 @@ sudo apt-get -y install \
     wget \
     xclip
 
-mkdir -p ~/.config/nvim
-
-VERSION=v0.4.3
-mkdir -p ~/.local && cd /tmp
+mkdir -p ~/.config/nvim && mkdir -p ~/.local && cd /tmp
 [ ! -f nvim-linux64.tar.gz ] && wget --progress=bar https://github.com/neovim/neovim/releases/download/$VERSION/nvim-linux64.tar.gz
 tar -xzf nvim-linux64.tar.gz && cd nvim-linux64 && cp -r * ~/.local
 
