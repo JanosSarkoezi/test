@@ -6,7 +6,7 @@ echo "-- dwm $VERSION"
 echo "--"
 sudo apt-get -y install \
     libxft-dev \
-    vim
+    libxinerama-dev
 
 mkdir -p ~/.local/bin
 mkdir -p ~/dev/git && cd ~/dev/git
