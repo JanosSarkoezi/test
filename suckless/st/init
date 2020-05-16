@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+VERSION=0.8.3
+echo "--"
+echo "-- suckless $VERSION"
+echo "--"
+sudo apt-get -y install \
+    libxft-dev \
+    vim
+
+mkdir -p ~/.local/bin
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d st ]
+then
+    echo "git pull --rebase" && cd st && git pull --rebase
+else
+    echo "git clone https://git.suckless.org/st" && git clone https://git.suckless.org/st && cd st
+fi
+
+cp ~/.dotfiles/suckless/st/config-xterm-256color.diff . && patch config.def.h < config-xterm-256color.diff && make && git checkout -- .
+if [ -d /tmp/st-$VERSION ]
+then
+    cd /tmp/st-$VERSION && cp -r * ~/.local
+else
+    make PREFIX=/tmp/st-$VERSION install && cd /tmp && tar -czf st-$VERSION.tar.gz st-$VERSION
+fi
