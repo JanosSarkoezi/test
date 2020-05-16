@@ -5,6 +5,7 @@ echo "--"
 echo "-- dwm $VERSION"
 echo "--"
 sudo apt-get -y install \
+    build-essential \
     libxft-dev \
     libxinerama-dev
 
