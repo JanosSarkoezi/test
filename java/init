@@ -4,6 +4,7 @@ echo "-- java (apt-get openjdk-11-jdk)"
 echo "--"
 sudo apt-get -y install openjdk-11-jdk
 
-for dir in java/*; do
+cd java
+for dir in *; do
     [ -d "$dir" ] && $dir/init && stow $dir
 done

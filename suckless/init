@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-for dir in suckless/*; do
+cd suckless
+for dir in *; do
     [ -d "$dir" ] && $dir/init && stow $dir
 done

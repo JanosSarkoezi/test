@@ -5,6 +5,7 @@ echo "--"
 sudo apt-get -y install zsh
 ps -p $$ | grep zsh > /dev/null && chsh -s $(which zsh)
 
-for dir in zsh/*; do
+cd zsh
+for dir in *; do
     [ -d "$dir" ] && $dir/init && stow $dir
 done
