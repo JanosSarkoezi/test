@@ -29,16 +29,11 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 let g:which_key_map['.'] = [ ':e $MYVIMRC'                , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                  , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows' ]
+let g:which_key_map['c'] = [ ':cd %:h'                    , 'cd to files dir']
 let g:which_key_map['d'] = [ ':bd'                        , 'delete buffer']
 let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
-
-	""" Configuration example
-	let g:floaterm_keymap_new    = '<F7>'
-	let g:floaterm_keymap_prev   = '<F8>'
-	let g:floaterm_keymap_next   = '<F9>'
-	let g:floaterm_keymap_toggle = '<F10>'
 
 " Group mappings
 
@@ -60,8 +55,6 @@ let g:which_key_map.s = {
       \ 'c' : [':Commits'      , 'commits'],
       \ 'C' : [':BCommits'     , 'buffer commits'],
       \ 'f' : [':Files'        , 'files'],
-      \ 'g' : [':GFiles'       , 'git files'],
-      \ 'G' : [':GFiles?'      , 'modified git files'],
       \ 'h' : [':History'      , 'file history'],
       \ 'H' : [':History:'     , 'command history'],
       \ 'l' : [':Lines'        , 'lines'] ,
@@ -85,10 +78,12 @@ let g:which_key_map.g = {
       \ 'd' : [':CocCommand git.diffCached'       , 'diffCached'],
       \ 'c' : [':CocCommand git.showCommit'       , 'showCommit'],
       \ 'f' : [':CocCommand git.foldUnchanged'    , 'foldUnchanged'],
+      \ 'g' : [':GFiles'                          , 'git files'],
+      \ 'G' : [':GFiles?'                         , 'modified git files'],
       \ }
 
 " l is for language server protocol
-let g:which_key_map.c = {
+let g:which_key_map.l = {
       \ 'name' : '+coc' ,
       \ '.' : [':CocConfig'                          , 'config'],
       \ ';' : ['<Plug>(coc-refactor)'                , 'refactor'],

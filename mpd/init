@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "--"
-echo "-- mpd"
+echo "-- mpd (apt-get)"
 echo "--"
 sudo apt-get -y install mpd mpc
 

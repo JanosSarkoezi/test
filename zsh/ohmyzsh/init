@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+VERSION=master
+echo "--"
+echo "-- oh-my-zsh $VERSION"
+echo "--"
+
+cd ~
+if [ -d ~/.oh-my-zsh ]
+then
+    echo "git pull --rebase" && cd ~/.oh-my-zsh && git checkout $VERSION && git pull --rebase
+else
+    echo "git clone https://github.com/ohmyzsh/ohmyzsh.git" && git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh && cd ~/.ohmyzsh && git checkout $VERSION
+fi

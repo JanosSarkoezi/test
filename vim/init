@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "--"
-echo "-- vim"
+echo "-- vim (apt-get)"
 echo "--"
 sudo apt-get -y install \
     git \

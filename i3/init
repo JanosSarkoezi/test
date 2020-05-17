@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "--"
-echo "-- i3"
+echo "-- i3 (apt-get)"
 echo "--"
 sudo apt-get -y install i3 j4-dmenu-desktop 
 mkdir -p ~/.config/i3
