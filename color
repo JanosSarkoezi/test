@@ -3,30 +3,31 @@
 use strict;
 use warnings;
 use Term::ANSIColor; 
-my %messages = (
-  "git pull"       => "yellow",
-  "error"          => "red",
-  "failed"         => "red",
-  "not found"      => "red",
-  "is not"         => "red",
-  "cannot"         => "red",
-  "newest version" => "green"
-);
 
-my $key;
-my $value;
-my $colored = 0;
-while (<>) {
-    $colored = 0;
-    while (($key, $value) = each (%messages)) {
-        $value = $messages{$key};
-        if ($_ =~ m/$key/i) {
-            print color("$value").$_.color("reset");
-            $colored = 1;
+while (my $line = <STDIN>) {
+    print asdf($line).$line;
+}
+
+sub asdf {
+    my $line = shift(@_);
+    my $color = color("reset");
+
+    my %messages = (
+      "newest version" => "green",
+      "git pull"       => "yellow",
+      "error"          => "red",
+      "failed"         => "red",
+      "not found"      => "red",
+      "is not"         => "red",
+      "cannot"         => "red"
+    );
+
+    while (my ($key, $value) = each (%messages)) {
+        if ($line =~ m/$key/i) {
+            $color = color($value);
+            last;
         }
     }
 
-    if ($colored == 0) {
-        print $_;
-    }
-} 
+    return $color;
+}
