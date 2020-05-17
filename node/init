@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
+VERSION=v13.14.0
 echo "--"
-echo "-- node"
+echo "-- node $VERSION"
 echo "--"
 sudo apt-get -y install wget 
 
-VERSION=v13.14.0
 DISTRO=linux-x64
 mkdir -p ~/.local && cd /tmp
 [ ! -f node-$VERSION-$DISTRO.tar.gz ] && wget --progress=bar http://nodejs.org/dist/v13.14.0/node-$VERSION-$DISTRO.tar.gz

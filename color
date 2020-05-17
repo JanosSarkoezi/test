@@ -8,6 +8,8 @@ my %messages = (
   "error"          => "red",
   "failed"         => "red",
   "not found"      => "red",
+  "is not"         => "red",
+  "cannot"         => "red",
   "newest version" => "green"
 );
 

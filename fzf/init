@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
+VERSION=master
 echo "--"
-echo "-- fzf"
+echo "-- fzf $VERSION"
 echo "--"
 
 if [ -d ~/.fzf ]
 then
-    echo "git pull --rebase" && cd ~/.fzf && git pull --rebase
+    echo "git pull --rebase" && cd ~/.fzf && git pull --rebase && git checkout $VERSION
 else
-    echo "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf" && git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    echo "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf" && git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf $$ cd ~/.fzf && git checkout $VERSION
 fi
