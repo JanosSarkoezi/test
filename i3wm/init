@@ -30,11 +30,11 @@ mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d i3 ]
 then
     echo "git checkout $VERSION" && cd i3 && git checkout $VERSION && \
-    autoreconf && ./configure --prefix=/tmp && cd x86_64-pc-linux-gnu && make -j8
+    automake --add-missing && autoreconf && ./configure --prefix=/tmp && cd x86_64-pc-linux-gnu && make -j8
 else
     echo "git clone https://github.com/i3/i3" && \
     git clone https://github.com/i3/i3 && cd i3 && git checkout $VERSION && \
-    autoreconf && ./configure --prefix=/tmp && cd x86_64-pc-linux-gnu && make -j8
+    automake --add-missing && autoreconf && ./configure --prefix=/tmp && cd x86_64-pc-linux-gnu && make -j8
 fi
 
 cd /tmp && cd i3-$VERSION && cp -r * ~/.local
