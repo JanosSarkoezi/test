@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+VERSION=master
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d mupdf ]
+then
+    echo "git checkout $VERSION" && cd mupdf && git checkout $VERSION && \
+    make prefix=/tmp/forDelete/mupdf-$VERSION install
+else
+    echo "git clone --recursive git://git.ghostscript.com/mupdf.git" && \
+    git clone --recursive git://git.ghostscript.com/mupdf.git && cd mupdf && git checkout $VERSION && \
+    make prefix=/tmp/forDelete/mupdf-$VERSION install
+fi
+
+mkdir -p /tmp/forDelete && cd /tmp/forDelete
+[ ! -f mupdf-$VERSION.tar.gz ] && tar -czf mupdf-$VERSION.tar.gz mupdf-$VERSION
+cd mupdf-$VERSION && tar -tzf /tmp/forDelete/mupdf-$VERSION.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
+cd ~/.local       && tar -tzf /tmp/forDelete/mupdf-$VERSION.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
+cd ~/.local && find /tmp/forDelete/mupdf-$VERSION -type d -empty | cut -d/ -f5- | xargs rmdir -p 2> /dev/null
