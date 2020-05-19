@@ -15,5 +15,5 @@ fi
 mkdir -p /tmp/forDelete && cd /tmp/forDelete
 [ ! -f i3-$VERSION.tar.gz ] && tar -czf i3-$VERSION.tar.gz i3-$VERSION
 cd i3-$VERSION && tar -tzf /tmp/forDelete/i3-$VERSION.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
-cd ~/.local       && tar -tzf /tmp/forDelete/i3-$VERSION.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
+cd ~/.local    && tar -tzf /tmp/forDelete/i3-$VERSION.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
 cd ~/.local && find /tmp/forDelete/i3-$VERSION -type d -empty | cut -d/ -f5- | xargs rmdir -p 2> /dev/null
