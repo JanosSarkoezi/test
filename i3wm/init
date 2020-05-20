@@ -25,8 +25,7 @@ sudo apt-get -y install \
     libpango1.0-dev \
     vim
 
-mkdir -p ~/.local/bin
-mkdir -p ~/dev/git && cd ~/dev/git
+mkdir -p ~/.config/i3 &&  mkdir -p ~/.local/bin &&mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d i3 ]
 then
     echo "git checkout $VERSION" && cd i3 && git checkout $VERSION && \
