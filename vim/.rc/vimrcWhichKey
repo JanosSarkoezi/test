@@ -32,8 +32,6 @@ let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows' ]
 let g:which_key_map['c'] = [ ':cd %:h'                    , 'cd to files dir']
 let g:which_key_map['d'] = [ ':bd'                        , 'delete buffer']
 let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
-let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 
 " Group mappings
 
