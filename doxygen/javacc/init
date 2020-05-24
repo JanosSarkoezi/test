@@ -14,12 +14,11 @@ mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d javacc ]
 then
     echo "git checkout $VERSION" && cd javacc && git checkout $VERSION && \
-    ant dist
 else
     echo "git clone https://github.com/javacc/javacc" && \
     git clone https://github.com/javacc/javacc && cd javacc && git checkout $VERSION && \
     ant dist
 fi
 
-cp target/$VERSION-distribution.tar.gz /tmp && cd /tmp && \
-tar -xzf $VERSION-distribution.tar.gz && cd $VERSION && cp -r * ~/.local
+[ ! -d /tmp/$VERSION-distribution ] && ant dist && cp target/$VERSION-distribution.tar.gz /tmp && cd /tmp && tar -czf $VERSION-distribution.tar.gz
+cd /tmp/$VERSION && cp -r * ~/.local
