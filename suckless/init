@@ -2,5 +2,5 @@
 
 cd suckless
 for dir in *; do
-    [ -d "$dir" ] && $dir/init && stow $dir
+    [ -d "$dir" ] && $dir/init && stow $dir -t ~
 done
