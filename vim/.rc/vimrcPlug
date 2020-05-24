@@ -12,7 +12,6 @@ Plug 'dpelle/vim-LanguageTool'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'voldikss/vim-floaterm'
 Plug 'liuchengxu/vim-which-key'
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug 'vimwiki/vimwiki'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
