@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION=master
+VERSION=javacc-7.0.7
 echo "--"
 echo "-- javacc $VERSION"
 echo "--"
@@ -21,4 +21,5 @@ else
     ant dist
 fi
 
-cd /tmp && cd javacc-$VERSION && cp -r * ~/.local
+cp target/$VERSION-distribution.tar.gz /tmp && tar -xzf $VERSION-distribution.tar.gz
+cd /tmp && cd $VERSION && cp -r * ~/.local
