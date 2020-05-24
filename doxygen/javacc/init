@@ -20,4 +20,4 @@ else
 fi
 
 [ ! -d /tmp/$VERSION ] && ant dist && cp target/$VERSION-distribution.tar.gz /tmp && cd /tmp && tar -czf $VERSION-distribution.tar.gz
-cd /tmp/$VERSION && cp -r * ~/.local
+cd /tmp/$VERSION && cp -rf * ~/.local
