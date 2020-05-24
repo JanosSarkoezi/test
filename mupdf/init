@@ -18,12 +18,11 @@ mkdir -p ~/.local/bin
 mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d mupdf ]
 then
-    echo "git checkout $VERSION" && cd mupdf && git checkout $VERSION && \
-    make prefix=/tmp/mupdf-$VERSION install
+    echo "git checkout $VERSION" && cd mupdf && git checkout $VERSION
 else
     echo "git clone --recursive git://git.ghostscript.com/mupdf.git" && \
-    git clone --recursive git://git.ghostscript.com/mupdf.git && cd mupdf && git checkout $VERSION && \
-    make prefix=/tmp/mupdf-$VERSION install
+    git clone --recursive git://git.ghostscript.com/mupdf.git && cd mupdf && git checkout $VERSION
 fi
 
+[ ! -d /tmp/mupdf-$VERSION ] && make prefix=/tmp/mupdf-$VERSION install && cd /tmp && tar -czf st-$VERSION.tar.gz st-$VERSION
 cd /tmp && cd mupdf-$VERSION && cp -r * ~/.local
