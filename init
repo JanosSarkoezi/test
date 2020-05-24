@@ -7,7 +7,7 @@ sudo apt-get -y install \
 
 mkdir -p ~/.local/bin && source ~/.profile
 
-init=(i3 suckless zsh mupdf fzf mpd node cmake tmux java nvim vim)
+init=(i3 suckless zsh doxygen mupdf fzf mpd node cmake tmux java nvim vim)
 for dir in "${init[@]}"; do
     if [ -d "$dir" ]; then
         $dir/init
