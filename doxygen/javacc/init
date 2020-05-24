@@ -21,5 +21,5 @@ else
     ant dist
 fi
 
-cp target/$VERSION-distribution.tar.gz /tmp && tar -xzf $VERSION-distribution.tar.gz
-cd /tmp && cd $VERSION && cp -r * ~/.local
+cp target/$VERSION-distribution.tar.gz /tmp && cd /tmp && \
+tar -xzf $VERSION-distribution.tar.gz && cd $VERSION && cp -r * ~/.local
