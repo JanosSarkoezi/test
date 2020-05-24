@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+cd doxygen 
+for dir in *; do
+    [ -d "$dir" ] && $dir/init && stow $dir
+done
+cd ..
+
+VERSION=master
+echo "--"
+echo "-- doxigen $VERSION"
+echo "--"
+sudo apt-get -y install \
+    build-essential \
+    wget \
+    git \
+    flex \
+    vim
+
+mkdir -p ~/.local/bin
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d doxygen ]
+then
+    echo "git checkout $VERSION" && cd doxygen && git checkout $VERSION && \
+    make prefix=/tmp/doxygen-$VERSION install
+else
+    echo "git clone --recursive https://github.com/doxygen/doxygen" && \
+    git clone --recursive https://github.com/doxygen/doxygen && cd doxygen && git checkout $VERSION && \
+    make prefix=/tmp/doxygen-$VERSION install
+fi
+
+cd /tmp && cd doxygen-$VERSION && cp -r * ~/.local

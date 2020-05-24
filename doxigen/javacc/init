@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+VERSION=master
+echo "--"
+echo "-- javacc $VERSION"
+echo "--"
+sudo apt-get -y install \
+    openjdk-8-jdk \
+    ant \
+    vim
+
+mkdir -p ~/.local/bin
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d javacc ]
+then
+    echo "git checkout $VERSION" && cd javacc && git checkout $VERSION && \
+    ant dist
+else
+    echo "git clone https://github.com/javacc/javacc" && \
+    git clone https://github.com/javacc/javacc && cd javacc && git checkout $VERSION && \
+    ant dist
+fi
+
+cd /tmp && cd javacc-$VERSION && cp -r * ~/.local

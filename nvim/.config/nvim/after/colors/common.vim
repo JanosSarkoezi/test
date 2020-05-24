@@ -10,3 +10,4 @@
 hi! diffChanged  ctermfg=yellow
 hi! diffRemoved  ctermfg=red
 hi! diffAdded    ctermfg=green
+hi  Search       cterm=reverse ctermfg=214 ctermbg=235 gui=reverse guifg=#fabd2f guibg=#282828
