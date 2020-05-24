@@ -21,12 +21,11 @@ mkdir -p ~/.local/bin
 mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d doxygen ]
 then
-    echo "git checkout $VERSION" && cd doxygen && git checkout $VERSION && \
-    mkdir -p build && cd build && cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/tmp/doxygen-$VERSION .. && make install
+    echo "git checkout $VERSION" && cd doxygen && git checkout $VERSION
 else
     echo "git clone --recursive https://github.com/doxygen/doxygen" && \
-    git clone --recursive https://github.com/doxygen/doxygen && cd doxygen && git checkout $VERSION && \
-    mkdir -p build && cd build && cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/tmp/doxygen-$VERSION .. && make install
+    git clone --recursive https://github.com/doxygen/doxygen && cd doxygen && git checkout $VERSION
 fi
 
+mkdir -p build && cd build && cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/tmp/doxygen-$VERSION .. && make install
 cd /tmp && cd doxygen-$VERSION && cp -r * ~/.local

@@ -19,5 +19,5 @@ else
     git clone https://github.com/javacc/javacc && cd javacc && git checkout $VERSION
 fi
 
-[ ! -d /tmp/$VERSION-distribution ] && ant dist && cp target/$VERSION-distribution.tar.gz /tmp && cd /tmp && tar -czf $VERSION-distribution.tar.gz
+[ ! -d /tmp/$VERSION ] && ant dist && cp target/$VERSION-distribution.tar.gz /tmp && cd /tmp && tar -czf $VERSION-distribution.tar.gz
 cd /tmp/$VERSION && cp -r * ~/.local
