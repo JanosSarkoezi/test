@@ -2,7 +2,7 @@
 
 cd doxygen 
 for dir in *; do
-    [ -d "$dir" ] && $dir/init && stow $dir -t ~
+    [ -d "$dir" ] && [ ! "${dir:0:2}" = __ ] && $dir/init && stow $dir -t ~
 done
 cd ..
 
