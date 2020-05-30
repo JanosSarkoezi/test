@@ -9,17 +9,15 @@ sudo apt-get -y install \
     wget \
     xclip
 
+cd nvim
+for dir in *; do
+    [ -d "$dir" ] && $dir/init && stow $dir
+done
+cd ..
+
 mkdir -p ~/.config/nvim && mkdir -p ~/.local && cd /tmp
 [ ! -f nvim-linux64.tar.gz ] && wget --progress=bar https://github.com/neovim/neovim/releases/download/$VERSION/nvim-linux64.tar.gz
 tar -xzf nvim-linux64.tar.gz && cd nvim-linux64 && cp -r * ~/.local
 
-mkdir -p ~/.dotfiles/vim/.vim && cd ~/.dotfiles/vim/.vim
-if [ -d autoload ]
-then
-    echo "git pull --rebase" && cd autoload && git pull --rebase
-else
-    echo "git clone https://github.com/junegunn/vim-plug autoload" && git clone https://github.com/junegunn/vim-plug autoload
-fi
+curl -fLo ~/.dotfiles/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-mkdir -p ~/.local/share/nvim/site && cd ~/.local/share/nvim/site
-[ ! -e autoload ] && ln -s ~/.dotfiles/vim/.vim/autoload autoload
