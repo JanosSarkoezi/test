@@ -7,5 +7,5 @@ sudo apt-get -y install \
 
 mkdir -p ~/.local/bin
 for dir in *; do
-    [ -d "$dir" ] && $dir/init && stow $dir -t ~
+    [ -f "$dir/init" ] && $dir/init && stow $dir -t ~
 done
