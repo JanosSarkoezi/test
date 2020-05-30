@@ -6,10 +6,11 @@ echo "--"
 
 cd fzf 
 for dir in *; do
-    [ -d "$dir" ] && $dir/init && stow $dir
+    [ -d "$dir" ] && $dir/init && stow $dir -t ~
 done
 cd ..
 
+cd ~
 if [ -d ~/.fzf ]
 then
     echo "git pull --rebase" && cd ~/.fzf && git pull --rebase && git checkout $VERSION
