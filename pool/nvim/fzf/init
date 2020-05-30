@@ -4,6 +4,12 @@ echo "--"
 echo "-- fzf $VERSION"
 echo "--"
 
+cd fzf 
+for dir in *; do
+    [ -d "$dir" ] && $dir/init && stow $dir
+done
+cd ..
+
 if [ -d ~/.fzf ]
 then
     echo "git pull --rebase" && cd ~/.fzf && git pull --rebase && git checkout $VERSION

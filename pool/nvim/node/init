@@ -5,6 +5,12 @@ echo "-- node $VERSION"
 echo "--"
 sudo apt-get -y install wget 
 
+cd nvim
+for dir in *; do
+    [ -d "$dir" ] && $dir/init && stow $dir
+done
+cd ..
+
 DISTRO=linux-x64
 mkdir -p ~/.local && cd /tmp
 [ ! -f node-$VERSION-$DISTRO.tar.gz ] && wget --progress=bar http://nodejs.org/dist/v13.14.0/node-$VERSION-$DISTRO.tar.gz
