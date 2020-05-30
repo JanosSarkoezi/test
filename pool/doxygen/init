@@ -1,11 +1,4 @@
 #!/usr/bin/env bash
-
-cd doxygen 
-for dir in *; do
-    [ -d "$dir" ] && [ ! "${dir:0:2}" = __ ] && $dir/init && stow $dir -t ~
-done
-cd ..
-
 VERSION=master
 echo "--"
 echo "-- doxigen $VERSION"
@@ -18,6 +11,12 @@ sudo apt-get -y install \
     python3-pip \
     vim \
     wget
+
+cd doxygen 
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
 
 mkdir -p ~/.local/bin
 mkdir -p ~/dev/git && cd ~/dev/git

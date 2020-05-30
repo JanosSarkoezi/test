@@ -10,6 +10,12 @@ sudo apt-get -y install \
     libxinerama-dev \
     vim
 
+cd dwm
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
 mkdir -p ~/.local/bin
 mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d dwm ]

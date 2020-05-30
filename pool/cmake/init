@@ -5,6 +5,12 @@ echo "-- cmake $VERSION"
 echo "--"
 sudo apt-get -y install wget 
 
+cd cmake
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
 mkdir -p ~/.local && cd /tmp
 [ ! -f cmake-$VERSION-Linux-x86_64.tar.gz ] && wget --progress=bar https://github.com/Kitware/CMake/releases/download/v$VERSION/cmake-$VERSION-Linux-x86_64.tar.gz
 

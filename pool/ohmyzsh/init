@@ -4,6 +4,12 @@ echo "--"
 echo "-- oh-my-zsh $VERSION"
 echo "--"
 
+cd ohmyzsh
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
 cd ~
 if [ -d ~/.oh-my-zsh ]
 then

@@ -6,7 +6,7 @@ echo "--"
 
 cd fzf 
 for dir in *; do
-    [ -d "$dir" ] && $dir/init && stow $dir -t ~
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
 done
 cd ..
 

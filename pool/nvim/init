@@ -12,7 +12,7 @@ sudo apt-get -y install \
 
 cd nvim
 for dir in *; do
-    [ -d "$dir" ] && $dir/init && stow $dir
+    [ -d $dir ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
 done
 cd ..
 

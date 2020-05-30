@@ -2,7 +2,7 @@
 
 VERSION=master
 echo "--"
-echo "-- i3 $VERSION"
+echo "-- i3wm $VERSION"
 echo "--"
 sudo apt-get -y install \
     build-essential \
@@ -24,6 +24,12 @@ sudo apt-get -y install \
     libpcre3-dev \
     libpango1.0-dev \
     vim
+
+cd i3wm
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
 
 mkdir -p ~/.config/i3 &&  mkdir -p ~/.local/bin &&mkdir -p ~/dev/git && cd ~/dev/git
 if [ -d i3 ]
