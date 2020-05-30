@@ -5,7 +5,7 @@ echo "-- node $VERSION"
 echo "--"
 sudo apt-get -y install wget 
 
-cd nvim
+cd node
 for dir in *; do
     [ -d "$dir" ] && $dir/init && stow $dir -t ~
 done
