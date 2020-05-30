@@ -9,7 +9,7 @@ cd node
 for dir in *; do
     [ -d "$dir" ] && $dir/init && stow $dir -t ~
 done
-cd ..
+cd .. && pwd
 
 DISTRO=linux-x64
 mkdir -p ~/.local && cd /tmp
