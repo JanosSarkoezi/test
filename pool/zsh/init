@@ -10,5 +10,4 @@ for dir in *; do
 done
 cd ..
 
-ps -p $$ | grep zsh > /dev/null && chsh -s $(which zsh)
-
+# ps -p $$ | grep zsh > /dev/null && chsh -s $(which zsh)
