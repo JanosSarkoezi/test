@@ -6,7 +6,7 @@ sudo apt-get -y install zsh
 
 cd zsh
 for dir in *; do
-    [ -d "$dir" ] && $dir/init && stow $dir
+    [ -f "$dir/init" ] && $dir/init && stow $dir -t ~
 done
 cd ..
 
