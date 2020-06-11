@@ -15,6 +15,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'vimwiki/vimwiki'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'jpalardy/vim-slime'
 Plug 'vim-scripts/AfterColors.vim'
 
 call plug#end()

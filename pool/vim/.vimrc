@@ -5,3 +5,4 @@ source ~/.dotfiles/vim/.rc/vimrcWhichKey
 source ~/.dotfiles/vim/.rc/vimrcFloaterm
 source ~/.dotfiles/vim/.rc/vimrcVimWiki
 source ~/.dotfiles/vim/.rc/vimrcLightline
+source ~/.dotfiles/vim/.rc/vimrcSlime
