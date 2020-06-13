@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+VERSION=master
+echo "--"
+echo "-- pulsemixerl $VERSION"
+echo "--"
+sudo apt-get -y install \
+    pulseaudio \
+    python3
+
+cd pulsemixer 
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+mkdir -p ~/.local/bin
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d pulsemixer ]
+then
+    echo "git pull --rebase" && cd pulsemixer && git pull --rebase && cp pulsemixer ~/.local/bin
+else
+    echo "git clone https://github.com/GeorgeFilipkin/pulsemixer" && git clone https://github.com/GeorgeFilipkin/pulsemixer && cd pulsemixer && cp pulsemixer ~/.local/bin
+fi
