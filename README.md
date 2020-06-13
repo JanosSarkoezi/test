@@ -10,7 +10,7 @@ Dafür ist ein Zusammenspiel von Skripten und stow vorgenommen worden. Es könne
 Das Haupt-Skript stoßt alle init-Skripten an, in denen ein stow Aufruf erfolgt. Mit der Hilfe von stow werden im HOME Verzeichnis die Konfigurationsdateien verlinkt. Danach
 werden die jeweiligen Programme entweder über apt install oder über die Quellen kompiliert und in Verzeichnis HOME/.local installiert. Bei der Installation der Programme
 werden im Allgemeinen folgende Schritte durchgeführt:
-- Download der Quellen von GitHub im Verzeichnis HOME/dev/git
+- Download der Quellen von GitHub in das Verzeichnis HOME/dev/git
 - Kompilieren der Quellen mit Installationspfad /tmp
 - Erstellen eines tar-Archivs im Verzeichnis /tmp
 - Kopieren aller Installations-Dateien in HOME/.local (kann auch man-pages, docs ... enthalten)
