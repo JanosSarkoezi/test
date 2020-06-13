@@ -15,4 +15,4 @@ werden im Allgemeinen folgende Schritte durchgeführt:
 - Erstellen eines tar-Archivs im Verzeichnis /tmp
 - Kopieren aller Installations-Dateien in HOME/.local (kann auch man-pages, docs ... enthalten)
 
-Die Erstellung eines tar-Archivs kann bei dem Entfernen der Installierten Dateien aus dem Verzeichnis HOME/.local zur Hilfe genommen werden.
+Gibt es ein passendes tar-Archiv für das Betriebssystem, so wird dies runtergeladen und im Verzeichnis HOME/.local entpackt.
