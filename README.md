@@ -97,7 +97,7 @@ Erklärung der Ausgabe des Haupt-Skriptes
 So ist zu sehen das die Kette bei `aaa -> ccc -> ddd` endet. Danach kommt die Kette `aaa -> ccc -> eee -> fff` zum Zuge. Das heißt, diese init-Skripten werden zu erst abgearbeitet.
 Danach folgen die init-Skripten in eee, ccc, aaa. Damit ist der Ast vom aaa abgearbeitet. Analog sieht es bei dem Ast bbb aus.
 
-# Umstellung auf ein Pool
+## Umstellung auf ein Pool
 Die Idee einer Hierarchie hat sich bewehrt. Was ist aber wenn mehrere Programme ein und das selbe Programm benötigen. In dem obigen Beispiel gesprochen: Was wenn die in ggg
 installiertes Programm auch das in aaa installiertes Programm benötigt? Etwas genauer. Sei die in ggg installiertes Programm cmake die in aaa auch benötigt wird. Hier kommt
 die Erweiterung auf ein Pool zum Zuge. Alle Programme kommen in ein Pool und die Hierarchie wird über Soft-links aufgebaut. Das heißt, im Pool liegenden Verzeichnisse haben
