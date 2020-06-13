@@ -29,7 +29,7 @@ then
     echo "git checkout $VERSION" && cd jq && git checkout $VERSION
 else
     echo "git clone https://github.com/stedolan/jq.git" && \
-    git clone https://github.com/stedolan/jq.git && cd jq && git submodule --init
+    git clone https://github.com/stedolan/jq.git && cd jq && git submodule update --init
 fi
 
 [ ! -d /tmp/jq-$VERSION ] && autireconf --fi && ./configure --prefix=/tmp/jq-$VERSION --with-oniguruma=builtin && make -j8 install && cd /tmp && tar -czf jq-$VERSION.tar.gz jq-$VERSION
