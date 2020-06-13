@@ -12,7 +12,7 @@ werden die jeweiligen Programme entweder über apt install oder über die Quelle
 werden im Allgemeinen folgende Schritte durchgeführt:
 - Download der Quellen von GitHub im Verzeichnis HOME/dev/git
 - Kompilieren der Quellen mit Installationspfad /tmp
-- Erstellen einer tar-Archivs im Verzeichnis /tmp
+- Erstellen eines tar-Archivs im Verzeichnis /tmp
 - Kopieren aller Installations-Dateien in HOME/.local (kann auch man-pages, docs ... enthalten)
 
 Die Erstellung eines tar-Archivs kann bei dem Entfernen der Installierten Dateien aus dem Verzeichnis HOME/.local zur Hilfe genommen werden.
