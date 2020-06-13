@@ -4,4 +4,5 @@ pip3 install --user neovim
 npm install -g neovim
 
 nvim +PlugInstall +qall
-nvim -c 'CocInstall -sync coc-json|qall'
+# temporary not avaible (pkill node)
+# nvim -c 'CocInstall -sync coc-json|qall'
