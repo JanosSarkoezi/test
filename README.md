@@ -91,7 +91,7 @@ Erklärung der Ausgabe des Haupt-Skriptes
 
 - Das Haupt-Skript geht alle Verzeichnisse durch und ruft in den gefunden Verzeichnissen die init-Skripten auf.
 - Die aufgerufenen init-Skripten gehen ihrerseits die Verzeichnisse durch und rufen die dort gefundenen init-Skripten auf.
-- Diese Kette der Inuit-Skript Aufrufe endet in einem Verzeichnis, das keine Unterverzeichnisse hat. Nennen wird diesen Skript Blatt-Skript.
+- Diese Kette der init-Skript Aufrufe endet in einem Verzeichnis, das keine Unterverzeichnisse hat. Nennen wird diesen Skript Blatt-Skript.
 - Nach der Ausführung des Blatt-Skriptes geht es ein Verzeichnis höher weiter.
 
 So ist zu sehen das die Kette bei `aaa -> ccc -> ddd` endet. Danach kommt die Kette `aaa -> ccc -> eee -> fff` zum Zuge. Das heißt, diese init-Skripten werden zu erst abgearbeitet.
@@ -130,3 +130,14 @@ nur ein Soft-links auf die direkten Unterverzeichnisse. Nach der Umstellung auf 
 ```
 Durch diese Umstellung ist das Problem mit der mehrfache Kopie eines init-Skriptes gelöst. Toller Nebeneffekt der Haupt-Skript lässt das Verzeichnis pool aus, da im pool selbst
 keine init-Datei vorhanden ist.
+
+# Zusammenspiel der init-Skripten und stow
+Das Haupt-Skript stoßt alle init-Skripten an, in denen ein stow Aufruf erfolgt. Mit der Hilfe von stow werden im HOME Verzeichnis die Konfigurationsdateien verlinkt. Danach
+werden die jeweiligen Programme entweder über apt install oder über die Quellen kompiliert und in Verzeichnis HOME/.local installiert. Bei der Installation der Programme
+werden im Allgemeinen folgende Schritte durchgeführt:
+- Download der Quellen von GitHub im Verzeichnis HOME/dev/git
+- Kompilieren der Quellen mit Installationspfad /tmp
+- Erstellen einer tar-Archivs im Verzeichnis /tmp
+- Kopieren aller Installations-Dateien in HOME/.local (kann auch man-pages, docs ... enthalten)
+
+Die Erstellung eines tar-Archivs kann bei dem Entfernen der Installierten Dateien aus dem Verzeichnis HOME/.local zur Hilfe genommen werden.
