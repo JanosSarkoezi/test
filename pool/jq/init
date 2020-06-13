@@ -30,6 +30,6 @@ else
     git clone https://github.com/stedolan/jq.git && cd jq && git submodule update --init
 fi
 
-[ ! -d /tmp/jq-$VERSION ] && autoreconf -fi && ./configure --prefix=/tmp/jq-$VERSION --with-oniguruma=builtin && make -j8 install && cd /tmp && tar -czf jq-$VERSION.tar.gz jq-$VERSION
+[ ! -d /tmp/jq-$VERSION ] && autoreconf -fi && ./configure --prefix=/tmp/jq-$VERSION --with-oniguruma=builtin && make -j8 && make check && make install && cd /tmp && tar -czf jq-$VERSION.tar.gz jq-$VERSION
 cd /tmp && tar -czf jq-$VERSION.tar.gz jq-$VERSION
 cd jq-$VERSION && cp -r * ~/.local
