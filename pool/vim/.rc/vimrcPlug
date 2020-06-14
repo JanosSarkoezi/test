@@ -5,17 +5,19 @@ set rtp+=~/.fzf
 Plug 'junegunn/fzf.vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'morhetz/gruvbox'
-Plug 'sakhnik/nvim-gdb', { 'branch': 'legacy' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Use release branch (Recommend)
-Plug 'vhdirk/vim-cmake'
-Plug 'dpelle/vim-LanguageTool'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'voldikss/vim-floaterm'
 Plug 'liuchengxu/vim-which-key'
-" Plug 'vimwiki/vimwiki'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'jpalardy/vim-slime'
 Plug 'vim-scripts/AfterColors.vim'
+Plug 'justinmk/vim-dirvish'
+Plug 'mileszs/ack.vim'
+" Plug 'vimwiki/vimwiki'
+" Plug 'sakhnik/nvim-gdb', { 'branch': 'legacy' }
+" Plug 'vhdirk/vim-cmake'
+" Plug 'dpelle/vim-LanguageTool'
 
 call plug#end()
