@@ -66,7 +66,9 @@ colors codedark
 " Hintergrundfarbe ausschalten, da in der .tmux.conf gesezter Wert gelden
 " soll. Wenn man zwischen den Panes wechelst so wird das inaktive Pane
 " asugegraut. Seie hierzu in der .tmux.conf
-" hi Normal ctermbg=none
+hi Normal      ctermbg=none
+hi NonText     ctermbg=none ctermfg=none
+hi EndOfBuffer ctermbg=none ctermfg=none
 
 let g:languagetool_jar='$HOME/.local/lib/languagetool/languagetool-commandline.jar'
 let g:languagetool_lang='de-DE'
