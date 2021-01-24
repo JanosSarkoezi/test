@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+VERSION=3.1
+mkdir -p ~/dev/git && cd ~/dev/git
+if [ -d tmux ]
+then
+    echo "git checkout $VERSION" && cd tmux && git checkout $VERSION && \
+    ./configure --prefix=/tmp/forDelete/tmux-$VERSION && make install
+else
+    echo "git clone https://github.com/tmux/tmux.git" && \
+    git clone https://github.com/tmux/tmux.git && cd tmux && git checkout $VERSION && \
+    ./autogen.sh && ./configure --prefix=/tmp/forDelete/tmux-$VERSION && make install
+fi
+
+mkdir -p /tmp/forDelete && cd /tmp/forDelete
+tar -czf tmux-$VERSION.tar.gz tmux-$VERSION
+cd tmux-$VERSION && tar -tzf /tmp/forDelete/tmux-$VERSION.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
+cd ~/.local      && tar -tzf /tmp/forDelete/tmux-$VERSION.tar.gz | cut -d/ -f2- | xargs rm 2> /dev/null
+cd ~/.local && find /tmp/forDelete/tmux-$VERSION -type d -empty | cut -d/ -f5- | xargs rmdir -p 2> /dev/null
