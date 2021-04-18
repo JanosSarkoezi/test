@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $term --no-startup-id st -f "Hack Nerd Font:pixelsize=16:antialias=true:autohint=true" -e tmux
+set $term --no-startup-id st
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -33,8 +33,8 @@ floating_modifier $mod
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 # bindsym $mod+Return exec termite
-bindsym $mod+Return split horizontal ;; exec $term
-bindsym $mod+Shift+Return split vertical ;; exec $term
+bindsym $mod+Return split horizontal ;; exec $term -f "Hack Nerd Font:pixelsize=16:antialias=true:autohint=true" -e tmux
+bindsym $mod+Shift+Return split vertical ;; exec $term -f "Hack Nerd Font:pixelsize=16:antialias=true:autohint=true" -e tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -216,8 +216,11 @@ mode "$mode_keyboard" {
     bindsym Return mode "default"
 }
 
-# Make the currently focused window a scratchpad
-bindsym $mod+Shift+minus move scratchpad
-
 # Show the first scratchpad window
-bindsym $mod+minus scratchpad show
+# bindsym $mod+minus scratchpad show
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] move scratchpad
+for_window [instance="dropdown"] sticky enable
+for_window [instance="dropdown"] resize set 1152 540
+exec $term -n dropdown -f "Hack Nerd Font:pixelsize=16:antialias=true:autohint=true" -e tmux
+bindsym $mod+minus [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
