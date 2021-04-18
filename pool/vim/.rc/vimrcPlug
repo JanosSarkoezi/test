@@ -7,7 +7,6 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Use release branch (Recommend)
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'voldikss/vim-floaterm'
 Plug 'liuchengxu/vim-which-key'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
