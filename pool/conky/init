@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+echo "--"
+echo "-- conky (apt-get)"
+echo "--"
+sudo apt-get -y install conky-all
+
+cd conky
+for dir in *; do
+    [ -d $dir  ] && [ -f $dir/init ] && $dir/init && stow $dir -t ~
+done
+cd ..
+
+mkdir -p ~/.config/conky
