@@ -1,0 +1,8 @@
+# /run/user/1000/systemd/transient/notify.timer
+# This is a transient unit file, created programmatically via the systemd API. Do not edit.
+[Unit]
+Description=notify.service
+
+[Timer]
+OnActiveSec=35s
+RemainAfterElapse=no
