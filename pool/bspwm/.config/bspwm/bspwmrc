@@ -8,6 +8,8 @@ conky &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
+bspc config ignore_ewmh_focus true
+
 bspc config border_width         1
 bspc config window_gap          12
 
