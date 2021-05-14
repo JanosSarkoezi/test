@@ -3,7 +3,7 @@
 sxhkd -m 1&
 compton &
 conky &
-polybar example&
+# polybar example&
 
 # mkfifo ~/sxhkd.fifo && sxhkd -s ~/sxhkd.fifo &&
 
