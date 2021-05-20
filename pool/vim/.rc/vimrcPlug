@@ -7,13 +7,19 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Use release branch (Recommend)
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'liuchengxu/vim-which-key'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'jpalardy/vim-slime'
 Plug 'vim-scripts/AfterColors.vim'
 Plug 'justinmk/vim-dirvish'
-Plug 'mileszs/ack.vim'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
+"Plug 'tpope/vim-dadbod'
+"Plug 'kristijanhusak/vim-dadbod-completion'
+"Plug 'haorenW1025/completion-nvim'
+
+" Plug 'liuchengxu/vim-which-key'
+" Plug 'mileszs/ack.vim'
 " Plug 'vimwiki/vimwiki'
 " Plug 'sakhnik/nvim-gdb', { 'branch': 'legacy' }
 " Plug 'vhdirk/vim-cmake'
