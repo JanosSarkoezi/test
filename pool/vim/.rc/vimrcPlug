@@ -14,8 +14,9 @@ Plug 'vim-scripts/AfterColors.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
-"Plug 'tpope/vim-dadbod'
-"Plug 'kristijanhusak/vim-dadbod-completion'
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'kristijanhusak/vim-dadbod-completion'
 "Plug 'haorenW1025/completion-nvim'
 
 " Plug 'liuchengxu/vim-which-key'

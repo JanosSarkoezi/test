@@ -38,4 +38,5 @@ export LF_ICONS
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 . "$HOME/.cargo/env"
-export PATH="$PATH:/opt/mssql-tools/bin"
+
+[ -d "/opt/mssql-tools/bin" ] && PATH="$PATH:/opt/mssql-tools/bin"
