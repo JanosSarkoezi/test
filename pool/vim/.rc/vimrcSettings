@@ -78,3 +78,6 @@ nnoremap <silent> <M-left> :TmuxNavigateLeft<cr>
 nnoremap <silent> <M-down> :TmuxNavigateDown<cr>
 nnoremap <silent> <M-up> :TmuxNavigateUp<cr>
 nnoremap <silent> <M-right> :TmuxNavigateRight<cr>
+
+nmap <C-Left> <C-]>
+nmap <C-Right> <C-T>
