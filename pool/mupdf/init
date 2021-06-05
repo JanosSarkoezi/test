@@ -30,5 +30,5 @@ else
     git clone --recursive git://git.ghostscript.com/mupdf.git && cd mupdf && git checkout $VERSION
 fi
 
-[ ! -d /tmp/mupdf-$VERSION ] && make prefix=/tmp/mupdf-$VERSION install && cd /tmp && tar -czf st-$VERSION.tar.gz st-$VERSION
+[ ! -d /tmp/mupdf-$VERSION ] && make prefix=/tmp/mupdf-$VERSION install && cd /tmp && tar -czf mupdf-$VERSION.tar.gz mupdf-$VERSION
 cd /tmp && cd mupdf-$VERSION && cp -r * ~/.local
