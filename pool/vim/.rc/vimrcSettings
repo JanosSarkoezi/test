@@ -57,6 +57,7 @@ hi Normal      ctermbg=none guibg=none
 hi NonText     ctermbg=none ctermfg=none
 hi EndOfBuffer ctermbg=none ctermfg=none
 hi DiffText    ctermfg=235 ctermbg=214 guifg=#282828 guibg=#fabd2f
+hi DiffDelete  ctermfg=12 ctermbg=none guifg=Blue guibg=none
 
 let g:tmux_navigator_no_mappings = 1
 
