@@ -66,7 +66,7 @@ nnoremap <silent> <M-down> :TmuxNavigateDown<cr>
 nnoremap <silent> <M-up> :TmuxNavigateUp<cr>
 nnoremap <silent> <M-right> :TmuxNavigateRight<cr>
 
-nmap <C-Left> <C-]>
-nmap <C-Right> <C-T>
+nmap <C-Right> <C-]>
+nmap <C-Left> <C-T>
 
 let g:Hexokinase_highlighters = [ 'backgroundfull' ]
