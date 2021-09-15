@@ -68,5 +68,6 @@ nnoremap <silent> <M-right> :TmuxNavigateRight<cr>
 
 nmap <C-Right> <C-]>
 nmap <C-Left> <C-T>
+autocmd FileType markdown set tw=80
 
 let g:Hexokinase_highlighters = [ 'backgroundfull' ]
