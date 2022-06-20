@@ -40,3 +40,4 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 . "$HOME/.cargo/env"
 
 [ -d "/opt/mssql-tools/bin" ] && PATH="$PATH:/opt/mssql-tools/bin"
+[ -d "$HOME/.docker/cli-plugins" ] && PATH="$HOME/.docker/cli-plugins:$PATH"
