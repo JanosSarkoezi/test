@@ -8,13 +8,16 @@ Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Use release branch (Recommend)
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'itchyny/lightline.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'jpalardy/vim-slime'
 Plug 'vim-scripts/AfterColors.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 Plug 'fcpg/vim-waikiki'
+Plug 'lervag/vimtex'
+Plug 'fatih/vim-go'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'

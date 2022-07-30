@@ -3,8 +3,8 @@ source ~/.dotfiles/vim/.rc/vimrcSettings
 source ~/.dotfiles/vim/.rc/vimrcCoc
 source ~/.dotfiles/vim/.rc/vimrcLightline
 source ~/.dotfiles/vim/.rc/vimrcSlime
+source ~/.dotfiles/vim/.rc/vimrcHexokinase
+source ~/.dotfiles/vim/.rc/vimrcWaikiki
+source ~/.dotfiles/vim/.rc/vimrcGitsigns
+source ~/.dotfiles/vim/.rc/vimrcTreesitter
 
-let g:Hexokinase_highlighters = ['backgroundfull']
-let g:waikiki_roots = ['~/Dropbox/zk/']
-let maplocalleader = " "
-let g:waikiki_default_maps = 1
