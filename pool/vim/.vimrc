@@ -7,4 +7,4 @@ source ~/.dotfiles/vim/.rc/vimrcHexokinase
 source ~/.dotfiles/vim/.rc/vimrcWaikiki
 source ~/.dotfiles/vim/.rc/vimrcGitsigns
 source ~/.dotfiles/vim/.rc/vimrcTreesitter
-
+source ~/.dotfiles/vim/.rc/vimrcTex
