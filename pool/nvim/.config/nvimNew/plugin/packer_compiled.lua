@@ -69,6 +69,19 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  Colorizer = {
+    commands = { "ColorToggle" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/saj/.local/share/nvim/site/pack/packer/opt/Colorizer",
+    url = "https://github.com/chrisbra/Colorizer"
+  },
+  ["HighStr.nvim"] = {
+    loaded = true,
+    path = "/home/saj/.local/share/nvim/site/pack/packer/start/HighStr.nvim",
+    url = "https://github.com/Pocco81/HighStr.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -182,6 +195,12 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file ColorToggle lua require("packer.load")({'Colorizer'}, { cmd = "ColorToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+time([[Defining lazy-load commands]], false)
+
 if should_profile then save_profiles() end
 
 end)

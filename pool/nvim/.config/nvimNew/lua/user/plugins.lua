@@ -38,4 +38,10 @@ return require('packer').startup(function(use)
     use {'folke/tokyonight.nvim'}
     use {'Mofiqul/vscode.nvim'}
     use {'EdenEast/nightfox.nvim'}
+
+    -- 
+    -- Colors
+    --
+    use {'chrisbra/Colorizer', cmd = 'ColorToggle'}
+    use {'Pocco81/HighStr.nvim'}
 end)
