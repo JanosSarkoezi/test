@@ -44,4 +44,14 @@ return require('packer').startup(function(use)
     --
     use {'chrisbra/Colorizer', cmd = 'ColorToggle'}
     use {'Pocco81/HighStr.nvim'}
+
+    --
+    -- Git
+    --
+    use {'lewis6991/gitsigns.nvim'}
+
+    --
+    -- Keymappings 
+    --
+    use {'folke/which-key.nvim'}
 end)
