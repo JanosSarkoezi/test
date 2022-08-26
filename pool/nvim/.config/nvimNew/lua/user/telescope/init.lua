@@ -1,19 +1,17 @@
-require('user.telescope.mappings')
-
 require('telescope').setup({
     extensions = {
         file_browser = {
             -- theme = 'ivy',
             sorting_strategy = "ascending",
-            hijack_netrw = true,
-            mappings = {
-                ['i'] = {
-                    -- your custom insert mode mappings
-                },
-                ['n'] = {
-                    -- your custom normal mode mappings
-                }
-            }
+            hijack_netrw = false,
+            -- mappings = {
+            --     ['i'] = {
+            --         -- your custom insert mode mappings
+            --     },
+            --     ['n'] = {
+            --         -- your custom normal mode mappings
+            --     }
+            -- }
         },
         bookmarks = {
             selected_browser = 'chrome',
@@ -25,6 +23,7 @@ require('telescope').setup({
 require('telescope').load_extension('file_browser')
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('bookmarks')
+require('telescope').load_extension('repo')
 
 local M = {}
 

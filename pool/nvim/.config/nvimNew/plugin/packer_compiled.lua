@@ -177,6 +177,11 @@ _G.packer_plugins = {
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
+  ["telescope-repo.nvim"] = {
+    loaded = true,
+    path = "/home/saj/.local/share/nvim/site/pack/packer/start/telescope-repo.nvim",
+    url = "https://github.com/cljoly/telescope-repo.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -186,6 +191,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/home/saj/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
   },
   ["vim-vsnip"] = {
     loaded = true,

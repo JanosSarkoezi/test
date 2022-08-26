@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
 	use {'nvim-telescope/telescope-file-browser.nvim'}
 	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
     use {'dhruvmanila/telescope-bookmarks.nvim', tag = '*'}
+    use {'cljoly/telescope-repo.nvim'}
 
     -- 
     -- treesitter
@@ -49,6 +50,7 @@ return require('packer').startup(function(use)
     -- Git
     --
     use {'lewis6991/gitsigns.nvim'}
+    use {'voldikss/vim-floaterm'}
 
     --
     -- Keymappings 
