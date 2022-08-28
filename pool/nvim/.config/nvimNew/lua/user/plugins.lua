@@ -2,36 +2,36 @@ return require('packer').startup(function(use)
     use {'wbthomason/packer.nvim'}
 
     --
-	-- LSP configuration
+    -- LSP configuration
     --
     use {'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig'}
 
-	use {'hrsh7th/cmp-nvim-lsp'}
-	use {'hrsh7th/cmp-buffer'}
-	use {'hrsh7th/cmp-path'}
-	use {'hrsh7th/cmp-cmdline'}
-	use {'hrsh7th/nvim-cmp'}
+    use {'hrsh7th/cmp-nvim-lsp'}
+    use {'hrsh7th/cmp-buffer'}
+    use {'hrsh7th/cmp-path'}
+    use {'hrsh7th/cmp-cmdline'}
+    use {'hrsh7th/nvim-cmp'}
 
-	use {'hrsh7th/cmp-vsnip'}
-	use {'hrsh7th/vim-vsnip'}
+    use {'hrsh7th/cmp-vsnip'}
+    use {'hrsh7th/vim-vsnip'}
 
-	use {'onsails/lspkind.nvim'}
+    use {'onsails/lspkind.nvim'}
 
-	use {'mfussenegger/nvim-jdtls'}
+    use {'mfussenegger/nvim-jdtls'}
 
     --
-	-- telescope configuration
+    -- telescope configuration
     --
-	use {'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = {{'nvim-lua/plenary.nvim'}}}
-	use {'nvim-telescope/telescope-file-browser.nvim'}
-	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+    use {'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = {{'nvim-lua/plenary.nvim'}}}
+    use {'nvim-telescope/telescope-file-browser.nvim'}
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
     use {'dhruvmanila/telescope-bookmarks.nvim', tag = '*'}
     use {'cljoly/telescope-repo.nvim'}
 
     -- 
     -- treesitter
     --
-	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
     -- 
     -- Colorsheme
@@ -56,4 +56,11 @@ return require('packer').startup(function(use)
     -- Keymappings 
     --
     use {'folke/which-key.nvim'}
+
+    -- 
+    -- Latex
+    --
+    use {'lervag/vimtex'}
+
+    use {'renerocksai/calendar-vim'}
 end)

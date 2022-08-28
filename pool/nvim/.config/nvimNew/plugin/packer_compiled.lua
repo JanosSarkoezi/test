@@ -82,6 +82,11 @@ _G.packer_plugins = {
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/HighStr.nvim",
     url = "https://github.com/Pocco81/HighStr.nvim"
   },
+  ["calendar-vim"] = {
+    loaded = true,
+    path = "/home/saj/.local/share/nvim/site/pack/packer/start/calendar-vim",
+    url = "https://github.com/renerocksai/calendar-vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -201,6 +206,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/saj/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   },
   ["vscode.nvim"] = {
     loaded = true,

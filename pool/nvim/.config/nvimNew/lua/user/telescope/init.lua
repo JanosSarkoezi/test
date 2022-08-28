@@ -46,6 +46,7 @@ function M.find_configs()
             "~/.config/alacritty",
             "~/.config/bspwm",
             "~/.config/sxhkd",
+            "~/.config/zk",
         },
         follow = true,
         layout_strategy = "horizontal",
