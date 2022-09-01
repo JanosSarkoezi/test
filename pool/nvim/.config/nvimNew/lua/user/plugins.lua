@@ -62,5 +62,8 @@ return require('packer').startup(function(use)
     --
     use {'lervag/vimtex'}
 
+    -- 
+    -- Verschiedenes
     use {'renerocksai/calendar-vim'}
+    use {'christoomey/vim-tmux-navigator'}
 end)

@@ -34,6 +34,10 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.termguicolors = true
 -- vim.opt.cursorline = true
 vim.wo.cursorline = true
+-- Zeilennummer und relative Zeilennummer einschalten
+vim.opt.number = true
+vim.opt.relativenumber = true
+
 vim.highlight.create('CursorLine', {cterm='NONE', ctermfg=193, ctermbg=65, guifg='#d7ffaf', guibg='#5F875F'}, false)
 -- vim.highlight.create('Visual', {ctermfg=232, ctermbg=239}, false)
 -- vim.highlight.create('Search', {ctermfg='black', ctermbg=178}, false)
