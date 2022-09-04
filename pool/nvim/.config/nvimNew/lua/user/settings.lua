@@ -76,3 +76,6 @@ vim.highlight.create('CursorLine', {cterm='NONE', ctermfg=193, ctermbg=65, guifg
 --autocmd FileType markdown set tw=80
 --
 --let g:Hexokinase_highlighters = [ 'backgroundfull' ]
+
+-- vim.opt.spell = true
+-- vim.opt.spelllang = { 'de_de' }

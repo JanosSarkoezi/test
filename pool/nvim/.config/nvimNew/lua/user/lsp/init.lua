@@ -31,6 +31,7 @@ cmp.setup({
       { name = 'nvim_lsp' },
       { name = 'vsnip' },        -- For vsnip users.
       { name = 'buffer' },
+      -- { name = 'spell' },     -- For spell checking.
       { name = 'path' },
       -- { name = 'luasnip' },   -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.

@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
     use {'onsails/lspkind.nvim'}
 
     use {'mfussenegger/nvim-jdtls'}
+    -- use {'f3fora/cmp-spell'}
 
     --
     -- telescope configuration
@@ -66,4 +67,5 @@ return require('packer').startup(function(use)
     -- Verschiedenes
     use {'renerocksai/calendar-vim'}
     use {'christoomey/vim-tmux-navigator'}
+    use {'justinmk/vim-dirvish'}
 end)
