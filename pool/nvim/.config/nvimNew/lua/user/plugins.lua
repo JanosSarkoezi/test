@@ -68,4 +68,5 @@ return require('packer').startup(function(use)
     use {'renerocksai/calendar-vim'}
     use {'christoomey/vim-tmux-navigator'}
     use {'justinmk/vim-dirvish'}
+    use {'dpelle/vim-LanguageTool'}
 end)

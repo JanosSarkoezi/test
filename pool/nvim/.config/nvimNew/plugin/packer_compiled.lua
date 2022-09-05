@@ -202,6 +202,11 @@ _G.packer_plugins = {
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["vim-LanguageTool"] = {
+    loaded = true,
+    path = "/home/saj/.local/share/nvim/site/pack/packer/start/vim-LanguageTool",
+    url = "https://github.com/dpelle/vim-LanguageTool"
+  },
   ["vim-dirvish"] = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/vim-dirvish",

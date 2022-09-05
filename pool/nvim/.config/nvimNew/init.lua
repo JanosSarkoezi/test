@@ -4,4 +4,6 @@ require('user.telescope')
 require('user.colorscheme')
 require('user.lsp')
 require('user.git')
+require('user.languagetool')
+
 require('user.keymap')
