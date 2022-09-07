@@ -9,3 +9,4 @@ if not status_ok then
 end
 
 vim.api.nvim_set_hl(0, "Visual", {bg="#264F78", fg="none"})
+vim.api.nvim_set_hl(0, "Search", {bg="#eba834", fg="#101010"})
