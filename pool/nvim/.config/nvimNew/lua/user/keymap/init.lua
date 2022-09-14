@@ -8,6 +8,7 @@ require("which-key").register({
   ["<space>tr"] = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
   ["<space>tg"] = { "<cmd>Telescope live_grep<cr>", "Live-Grep" },
   ["<space>tm"] = { "<cmd>Telescope marks<cr>", "Marks" },
+  ["<space>tz"] = { "<cmd>Telescope zoxide list<cr>", "Zoxide" },
   ["<space>tc"] = { require('user.telescope').find_configs, "Config Files" },
   ["<space>tv"] = { require('user.telescope').find_vim, "Vim Files" },
   ["<space>cd"] = { "<cmd>cd %:p:h<cr>", "Change Dir to current" },
