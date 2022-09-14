@@ -192,6 +192,11 @@ _G.packer_plugins = {
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/telescope-repo.nvim",
     url = "https://github.com/cljoly/telescope-repo.nvim"
   },
+  ["telescope-zoxide"] = {
+    loaded = true,
+    path = "/home/saj/.local/share/nvim/site/pack/packer/start/telescope-zoxide",
+    url = "https://github.com/jvgrootveld/telescope-zoxide"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/telescope.nvim",
