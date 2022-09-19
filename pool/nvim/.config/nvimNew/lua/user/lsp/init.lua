@@ -31,6 +31,9 @@ cmp.setup({
       { name = 'nvim_lsp' },
       { name = 'vsnip' },        -- For vsnip users.
       { name = 'buffer' },
+      { name = 'rg', option = {
+          cwd = "/home/saj/Documents/txt" },
+      },
       -- { name = 'spell' },     -- For spell checking.
       { name = 'path' },
       -- { name = 'luasnip' },   -- For luasnip users.
@@ -42,7 +45,8 @@ cmp.setup({
             with_text = true,
             menu = {
                 buffer   = "[buf]",
-                nvim_lsp = "[LSP]",
+                nvim_lsp = "[lsp]",
+                rg       = "[rg]",
                 nvim_lua = "[api]",
                 path     = "[path]",
                 luasnip  = "[snip]",

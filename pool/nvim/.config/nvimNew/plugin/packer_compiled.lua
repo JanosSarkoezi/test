@@ -112,6 +112,11 @@ _G.packer_plugins = {
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["cmp-rg"] = {
+    loaded = true,
+    path = "/home/saj/.local/share/nvim/site/pack/packer/start/cmp-rg",
+    url = "https://github.com/lukas-reineke/cmp-rg"
+  },
   ["cmp-vsnip"] = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
