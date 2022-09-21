@@ -122,11 +122,6 @@ _G.packer_plugins = {
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
-  ["dired.nvim"] = {
-    loaded = true,
-    path = "/home/saj/.local/share/nvim/site/pack/packer/start/dired.nvim",
-    url = "https://github.com/X3eRo0/dired.nvim"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -151,11 +146,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
-  },
-  ["nui.nvim"] = {
-    loaded = true,
-    path = "/home/saj/.local/share/nvim/site/pack/packer/start/nui.nvim",
-    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -226,6 +216,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/vim-LanguageTool",
     url = "https://github.com/dpelle/vim-LanguageTool"
+  },
+  ["vim-dirvish"] = {
+    loaded = true,
+    path = "/home/saj/.local/share/nvim/site/pack/packer/start/vim-dirvish",
+    url = "https://github.com/justinmk/vim-dirvish"
   },
   ["vim-floaterm"] = {
     loaded = true,

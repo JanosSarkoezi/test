@@ -5,6 +5,6 @@ require('user.colorscheme')
 require('user.lsp')
 require('user.git')
 require('user.languagetool')
-require('user.dired')
+-- require('user.dired')
 
 require('user.keymap')
