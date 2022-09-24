@@ -251,6 +251,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
+  },
+  ["zk-nvim"] = {
+    loaded = true,
+    path = "/home/saj/.local/share/nvim/site/pack/packer/start/zk-nvim",
+    url = "https://github.com/mickael-menu/zk-nvim"
   }
 }
 
