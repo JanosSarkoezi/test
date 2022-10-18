@@ -65,6 +65,10 @@ require('lspconfig').jdtls.setup({
 	capabilities = capabilities
 })
 
+require('lspconfig').denols.setup({
+	capabilities = capabilities
+})
+
 require('lspconfig').sumneko_lua.setup({
 	capabilities = capabilities,
     settings = {

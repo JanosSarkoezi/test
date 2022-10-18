@@ -3,7 +3,7 @@
 #
 # terminal emulator
 super + Return
-	gnome-terminal -e tmux
+	gnome-terminal -- tmux
 	# st -f "Hack Nerd Font:pixelsize=16:antialias=true:autohint=true" -e tmux
 
 # program launcher

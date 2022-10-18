@@ -48,6 +48,7 @@ function M.find_configs()
             "~/.config/bspwm",
             "~/.config/sxhkd",
             "~/.config/zk",
+            "~/.config/systemd",
         },
         follow = true,
         layout_strategy = "horizontal",
