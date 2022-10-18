@@ -16,7 +16,7 @@ vim.opt.listchars = {eol = '↲', tab = '▸ ', trail = '·'}
 -- » (U+00BB) und ¶ (U+00B6). Die vorher gesetzten Symbole werden
 -- überschrieben.
 vim.opt.listchars = {eol = '¶', tab = '» ', trail = '·'}
-vim.highlight.create('ExtraWhitespace', {ctermbg='red', guibg='red'}, false)
+vim.api.nvim_set_hl(0, 'ExtraWhitespace', {ctermbg='red'})
 
 vim.opt.tabstop     = 4
 vim.opt.softtabstop = 4
@@ -38,7 +38,7 @@ vim.wo.cursorline = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.highlight.create('CursorLine', {cterm='NONE', ctermfg=193, ctermbg=65, guifg='#d7ffaf', guibg='#5F875F'}, false)
+vim.api.nvim_set_hl(0, 'CursorLine', {ctermfg=193, ctermbg=65,})
 -- vim.highlight.create('Visual', {ctermfg=232, ctermbg=239}, false)
 -- vim.highlight.create('Search', {ctermfg='black', ctermbg=178}, false)
 
