@@ -72,5 +72,6 @@ return require('packer').startup(function(use)
     use {'justinmk/vim-dirvish'}
     use {'dpelle/vim-LanguageTool'}
     use {'mickael-menu/zk-nvim'}
+    use {'jpalardy/vim-slime'}
     -- use {'X3eRo0/dired.nvim', requires = "MunifTanjim/nui.nvim",}
 end)

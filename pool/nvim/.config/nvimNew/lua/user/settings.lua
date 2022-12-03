@@ -39,6 +39,9 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.api.nvim_set_hl(0, 'CursorLine', {ctermfg=193, ctermbg=65,})
+
+vim.g.slime_target = 'tmux'
+vim.g.slime_paste_file = '$HOME/.slime_paste'
 -- vim.highlight.create('Visual', {ctermfg=232, ctermbg=239}, false)
 -- vim.highlight.create('Search', {ctermfg='black', ctermbg=178}, false)
 

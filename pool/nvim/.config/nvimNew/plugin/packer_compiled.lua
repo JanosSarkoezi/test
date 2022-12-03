@@ -227,6 +227,11 @@ _G.packer_plugins = {
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/vim-floaterm",
     url = "https://github.com/voldikss/vim-floaterm"
   },
+  ["vim-slime"] = {
+    loaded = true,
+    path = "/home/saj/.local/share/nvim/site/pack/packer/start/vim-slime",
+    url = "https://github.com/jpalardy/vim-slime"
+  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/home/saj/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
