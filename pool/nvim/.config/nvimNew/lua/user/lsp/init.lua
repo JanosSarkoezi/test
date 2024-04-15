@@ -69,7 +69,7 @@ require('lspconfig').denols.setup({
 	capabilities = capabilities
 })
 
-require('lspconfig').sumneko_lua.setup({
+require('lspconfig').lua_ls.setup({
 	capabilities = capabilities,
     settings = {
         Lua = {

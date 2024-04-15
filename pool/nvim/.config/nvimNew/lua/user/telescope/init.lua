@@ -13,11 +13,12 @@ require('telescope').setup({
             --     }
             -- }
         },
-        bookmarks = {
-            selected_browser = 'chrome',
-            url_open_command = 'chromium',
-        },
     }
+})
+
+require('browser_bookmarks').setup({
+    selected_browser = 'chrome',
+    url_open_command = 'chromium',
 })
 
 require('telescope').load_extension('file_browser')
