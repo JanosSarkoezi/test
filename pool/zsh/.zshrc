@@ -49,7 +49,7 @@ ZSH_THEME="simple"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker-compose)
+plugins=(git gitfast docker-compose)
 
 # User configuration
 
@@ -95,7 +95,7 @@ export OPENER='mimeopen'
 setopt rm_star_silent
 
 eval "$(zoxide init zsh)"
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 eval "$(lesspipe)"
 
