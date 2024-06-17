@@ -3,7 +3,7 @@
 #
 # terminal emulator
 super + Return
-	gnome-terminal -- tmux
+	kitty -e tmux
 	# st -f "Hack Nerd Font:pixelsize=16:antialias=true:autohint=true" -e tmux
 
 # program launcher
@@ -128,5 +128,5 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 super + minus 
- 	tdrop -am -w 60% -h 50% -y 25% -x 20% gnome-terminal -e tmux
+ 	tdrop -am -w 60% -h 50% -y 25% -x 20% kitty -e tmux
  	# tdrop -am -w 60% -h 50% -y 25% -x 20% st -f "Hack Nerd Font:pixelsize=16:antialias=true:autohint=true" -e tmux
