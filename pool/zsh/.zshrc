@@ -130,5 +130,3 @@ PERL_MB_OPT="--install_base \"/home/saj/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/saj/perl5"; export PERL_MM_OPT;
 
 MANPATH="$HOME/.local/share/man:$MANPATH"; export MANPATH
-
-setxkbmap de

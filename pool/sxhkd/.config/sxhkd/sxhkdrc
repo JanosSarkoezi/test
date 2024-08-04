@@ -25,6 +25,8 @@ super + Escape
 super + x ; {e, r, s}
     {bspc quit, systemctl reboot, systemctl poweroff}
 
+super + k
+	keybLayouts
 # super + alt + {q,r}
 # 	bspc {quit,wm -r}
 
